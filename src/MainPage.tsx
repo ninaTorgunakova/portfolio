@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect, useState } from 'react';
 import './MainPage.sass';
 import { GrNext, GrPrevious } from 'react-icons/gr';
 
@@ -15,27 +15,44 @@ const MainPage = () => {
       url: "photos/yellow.JPG"
     }
   ];
-  const [currentImage, setCurrentImage] = React.useState(0);
-  const [currentTab, setCurrentTab] = React.useState(0);
-  const toPreviousPhoto = () => {
-    if (currentImage === 0) {
-      setCurrentImage(images.length - 1);
-    } else {
-      setCurrentImage(currentImage - 1);
+  const [currentImage, setCurrentImage] = useState(0);
+  const [currentTab, setCurrentTab] = useState(0);
+  const [imgsLoading, setImgsLoading] = useState(true);
+
+  useEffect(() => {
+    const loadImage = (image: { url: string; }) => {
+      return new Promise((resolve, reject) => {
+        const loadImg = new Image();
+        loadImg.src = image.url;
+        loadImg.onload = () => resolve(image.url);
+        loadImg.onerror = err => reject(err);
+      });
     }
+    Promise.all(images.map(image => loadImage(image)))
+    .then(() => setImgsLoading(false))
+  }, []);
+
+  const toPreviousPhoto = () => {
+    const index = currentImage === 0 ? images.length - 1 : currentImage - 1;
+    switchPhoto(index);
   }
   const toNextPhoto = () => {
-    if (currentImage === images.length - 1) {
-      setCurrentImage(0);
-    } else {
-      setCurrentImage(currentImage + 1);
-    }
+    const index = currentImage === images.length - 1 ? 0 : currentImage + 1;
+    switchPhoto(index);
+  }
+
+  const switchPhoto = (index: number) => {
+    setImgsLoading(true);
+    setCurrentImage(index);
+    setTimeout(() => {
+      setImgsLoading(false);
+    }, 500);
   }
 
   return (
     <div className="main-page">
       <div className="gallery">
-        <img src={images[currentImage].url} alt="" loading="eager" className="gallery-photo"/>
+        <img src={images[currentImage].url} alt="" className={'gallery-photo ' + (imgsLoading ? 'loading' : '')}/> 
         <div className="gallery-buttons">
           <button className="gallery-button" onClick={toPreviousPhoto}>
             <GrPrevious></GrPrevious>

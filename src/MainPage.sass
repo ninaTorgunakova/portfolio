@@ -1,8 +1,9 @@
 .main-page
   display: flex
   flex-direction: row
+  padding-top: 30px
   width: 100vw
-  height: 100vh
+  height: calc(100vh - 30px)
   align-items: flex-start
   justify-content: space-evenly
   background-color: #9F9FB3
@@ -10,7 +11,11 @@
 .gallery-photo
   width: 500px
   height: 800px
-  transition: background 0.2s linear;
+  opacity: 1
+  transition: opacity 1.5s
+  &.loading
+    opacity: 0
+    transition: none
 
 .gallery-buttons
   display: flex
