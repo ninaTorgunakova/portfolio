@@ -1,16 +1,13 @@
 .main-page
   display: flex
   flex-direction: row
-  padding-top: 30px
-  width: 100vw
-  height: calc(100vh - 30px)
+  min-height: calc(100vh - 60px)
+  padding: 30px
   align-items: flex-start
-  justify-content: space-evenly
-  background-color: #9F9FB3
+  justify-content: center
 
 .gallery-photo
   width: 500px
-  height: 800px
   opacity: 1
   transition: opacity 1.5s
   &.loading
@@ -20,7 +17,7 @@
 .gallery-buttons
   display: flex
   justify-content: center
-  width: 500px
+  margin-top: 2px
 
 .gallery-button
   width: 100%
@@ -30,11 +27,8 @@
   font-size: 16px
   cursor: pointer
 
-.gallery-button:hover
-  background-color: #77778b
-
 .content
-  height: 800px
+  margin-left: 120px
 
 .content-tab-button
   border: none
@@ -42,5 +36,3 @@
   text-align: center
   font-size: 16px
   cursor: pointer
-  &.active
-      background-color: #77778b
