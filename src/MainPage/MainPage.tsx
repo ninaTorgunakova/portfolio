@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import './MainPage.sass';
 import { GrNext, GrPrevious } from 'react-icons/gr';
-import { firstTheme, secondTheme, Theme } from '../redux/themes';
+import { themes, Theme } from '../redux/themes';
 import { images } from '../redux/images';
 import { useDispatch, useSelector } from 'react-redux';
 import { Action, applyTheme } from '../redux/themeActions';
@@ -48,7 +48,7 @@ const MainPage = () => {
     setImgsLoading(true);
     setCurrentImage(index);
     setTimeout(() => {
-      const theme = index === 0 ? firstTheme : secondTheme;
+      const theme = themes[index];
       changeTheme(theme)
       setImgsLoading(false);
     }, 500);

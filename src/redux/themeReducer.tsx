@@ -1,12 +1,12 @@
 import { Action, APPLY_THEME } from './themeActions';
-import { firstTheme, Theme } from './themes';
+import { themes, Theme } from './themes';
 
 export interface State {
   theme: Theme;
 }
 
 const initialState: State = {
-  theme: firstTheme
+  theme: themes[0]
 };
 
 export const themeReducer = (state: State = initialState, action: Action) => {
