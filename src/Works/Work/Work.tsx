@@ -21,8 +21,8 @@ const Work = (props: WorkProps) => {
       <div className="text-info">
         <div style={props.theme.boldText} className="title">{props.info.title}</div>
         <div style={props.theme.text} className="description">{props.info.description}</div>
-        <a href={props.info.linkWeb} style={props.theme.text} className="link" target="_blank">Ссылка на сайт</a>
-        <a href={props.info.linkCode} style={props.theme.text} className="link" target="_blank">Ссылка на репозиторий</a>
+        <a href={props.info.linkWeb} style={props.theme.text} className="link" target="_blank" rel="noreferrer">Ссылка на сайт</a>
+        <a href={props.info.linkCode} style={props.theme.text} className="link" target="_blank" rel="noreferrer">Ссылка на репозиторий</a>
       </div>
     </div>
   );
