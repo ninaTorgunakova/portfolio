@@ -7,10 +7,8 @@ export interface Theme {
   tabsActive: CSSProperties,
   contentSection: CSSProperties,
   scrollBar: CSSProperties,
-  headers: CSSProperties,
   text: CSSProperties,
-  boldText: CSSProperties,
-  links: CSSProperties
+  boldText: CSSProperties
 };
 
 const whiteTheme: Theme = {
@@ -22,33 +20,28 @@ const whiteTheme: Theme = {
   },
   tabs: {
     fontFamily: 'garamond, serif',
+    fontSize: '28px',
     backgroundColor: '#756553',
+    color: '#F5D4AE'
   },
   tabsActive: {
     fontFamily: 'garamond, serif',
     fontWeight: 'bolder',
+    fontSize: '28px',
     backgroundColor: '#362E26',
+    color: '#F5D4AE'
   },
   contentSection: {
     backgroundColor: '#756553'
   },
-  headers: {
-    fontFamily: 'garamond, serif',
-    fontSize: '18px',
-    color: '#F5D4AE'
-  },
   text: {
     fontFamily: 'garamond, serif',
-    fontSize: '16px',
+    fontSize: '20px',
     color: '#F5D4AE'
   },
   boldText: {
     fontFamily: 'garamond, serif',
     fontWeight: 'bolder',
-    color: '#F5D4AE'
-  },
-  links: {
-    fontFamily: 'garamond, serif',
     color: '#F5D4AE'
   },
   scrollBar: {
@@ -65,34 +58,27 @@ const grayTheme: Theme = {
     backgroundColor: '#363636',
   },
   tabs: {
-    fontFamily: 'garamond, serif',
+    fontFamily: 'sans-serif',
     backgroundColor: '#363636',
+    fontSize: '28px'
   },
   tabsActive: {
-    fontFamily: 'garamond, serif',
+    fontFamily: 'sans-serif',
     fontWeight: 'bolder',
     backgroundColor: '#757575',
+    fontSize: '28px'
   },
   contentSection: {
     backgroundColor: '#363636'
   },
-  headers: {
-    fontFamily: 'garamond, serif',
-    fontSize: '18px',
-    color: '#F5F5F5'
-  },
   text: {
-    fontFamily: 'garamond, serif',
-    fontSize: '16px',
+    fontFamily: 'sans-serif',
+    fontSize: '20px',
     color: '#F5F5F5'
   },
   boldText: {
-    fontFamily: 'garamond, serif',
+    fontFamily: 'sans-serif',
     fontWeight: 'bolder',
-    color: '#F5F5F5'
-  },
-  links: {
-    fontFamily: 'garamond, serif',
     color: '#F5F5F5'
   },
   scrollBar: {
@@ -109,34 +95,28 @@ const blueTheme: Theme = {
     backgroundColor: '#405275',
   },
   tabs: {
-    fontFamily: 'garamond, serif',
+    fontFamily: 'cursive',
     backgroundColor: '#405275',
+    fontSize: '28px'
   },
   tabsActive: {
-    fontFamily: 'garamond, serif',
+    fontFamily: 'cursive',
     fontWeight: 'bolder',
     backgroundColor: '#212636',
+    color: '#F5F5F5',
+    fontSize: '28px'
   },
   contentSection: {
     backgroundColor: '#405275'
   },
-  headers: {
-    fontFamily: 'garamond, serif',
-    fontSize: '18px',
-    color: '#212636'
-  },
   text: {
-    fontFamily: 'garamond, serif',
-    fontSize: '16px',
+    fontFamily: 'cursive',
+    fontSize: '20px',
     color: '#212636'
   },
   boldText: {
-    fontFamily: 'garamond, serif',
+    fontFamily: 'cursive',
     fontWeight: 'bolder',
-    color: '#212636'
-  },
-  links: {
-    fontFamily: 'garamond, serif',
     color: '#212636'
   },
   scrollBar: {
@@ -155,32 +135,27 @@ const yellowTheme: Theme = {
   tabs: {
     fontFamily: 'garamond, serif',
     backgroundColor: '#36312A',
+    color: '#F5DEBF',
+    fontSize: '28px'
   },
   tabsActive: {
     fontFamily: 'garamond, serif',
     fontWeight: 'bolder',
     backgroundColor: '#756B5B',
+    fontSize: '28px',
+    color: '#F5DEBF',
   },
   contentSection: {
     backgroundColor: '#36312A'
   },
-  headers: {
-    fontFamily: 'garamond, serif',
-    fontSize: '18px',
-    color: '#F5DEBF'
-  },
   text: {
     fontFamily: 'garamond, serif',
-    fontSize: '16px',
+    fontSize: '20px',
     color: '#F5DEBF'
   },
   boldText: {
     fontFamily: 'garamond, serif',
     fontWeight: 'bolder',
-    color: '#F5DEBF'
-  },
-  links: {
-    fontFamily: 'garamond, serif',
     color: '#F5DEBF'
   },
   scrollBar: {
@@ -197,34 +172,27 @@ const redTheme: Theme = {
     backgroundColor: '#360803',
   },
   tabs: {
-    fontFamily: 'garamond, serif',
-    backgroundColor: '#360803',
+    fontFamily: 'sans-serif',
+    backgroundColor: '#F5230C',
+    fontSize: '28px'
   },
   tabsActive: {
-    fontFamily: 'garamond, serif',
+    fontFamily: 'sans-serif',
     fontWeight: 'bolder',
-    backgroundColor: '#751106',
+    backgroundColor: '#F5230C',
+    fontSize: '28px'
   },
   contentSection: {
     backgroundColor: '#360803'
   },
-  headers: {
-    fontFamily: 'garamond, serif',
-    fontSize: '18px',
-    color: '#F5230C'
-  },
   text: {
-    fontFamily: 'garamond, serif',
-    fontSize: '16px',
+    fontFamily: 'sans-serif',
+    fontSize: '20px',
     color: '#F5230C'
   },
   boldText: {
-    fontFamily: 'garamond, serif',
+    fontFamily: 'sans-serif',
     fontWeight: 'bolder',
-    color: '#F5230C'
-  },
-  links: {
-    fontFamily: 'garamond, serif',
     color: '#F5230C'
   },
   scrollBar: {

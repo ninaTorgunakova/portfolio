@@ -1,14 +1,15 @@
 import { useEffect, useState } from 'react';
-import './MainPage.sass';
 import { GrNext, GrPrevious } from 'react-icons/gr';
 import { themes, Theme } from '../redux/themes';
 import { images } from '../redux/images';
 import { useDispatch, useSelector } from 'react-redux';
 import { Action, applyTheme } from '../redux/themeActions';
+import { State } from '../redux/themeReducer';
 import { Dispatch } from 'redux';
 import About from '../About/About';
 import Works from '../Works/Works';
 import Contacts from '../Contacts/Contacts';
+import './MainPage.sass';
 
 const MainPage = () => {
   const [currentImage, setCurrentImage] = useState(0);
@@ -38,11 +39,11 @@ const MainPage = () => {
     switchPhoto(index);
   }
 
-  const changeTheme = (theme: any) => {
+  const changeTheme = (theme: Theme) => {
     dispatch(applyTheme(theme));
   }
 
-  const theme: Theme = useSelector((state: any) => state.theme);
+  const theme: Theme = useSelector((state: State) => state.theme);
 
   const switchPhoto = (index: number) => {
     setImgsLoading(true);
