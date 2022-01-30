@@ -3,12 +3,11 @@ import { CSSProperties } from 'react';
 export interface Theme {
   mainPage: CSSProperties;
   button: CSSProperties;
-  tabs: CSSProperties,
-  tabsActive: CSSProperties,
-  contentSection: CSSProperties,
-  scrollBar: CSSProperties,
-  text: CSSProperties,
-  boldText: CSSProperties
+  tabs: CSSProperties;
+  tabsActive: CSSProperties;
+  contentSection: CSSProperties;
+  text: CSSProperties;
+  boldText: CSSProperties;
 };
 
 const whiteTheme: Theme = {
@@ -21,14 +20,14 @@ const whiteTheme: Theme = {
   tabs: {
     fontFamily: 'garamond, serif',
     fontSize: '28px',
-    backgroundColor: '#756553',
+    backgroundColor: '#362E26',
     color: '#F5D4AE'
   },
   tabsActive: {
     fontFamily: 'garamond, serif',
     fontWeight: 'bolder',
     fontSize: '28px',
-    backgroundColor: '#362E26',
+    backgroundColor: '#756553',
     color: '#F5D4AE'
   },
   contentSection: {
@@ -43,10 +42,6 @@ const whiteTheme: Theme = {
     fontFamily: 'garamond, serif',
     fontWeight: 'bolder',
     color: '#F5D4AE'
-  },
-  scrollBar: {
-    scrollbarColor: '#DBBE9C',
-    scrollbarWidth: 'thin'
   }
 };
 
@@ -59,14 +54,14 @@ const grayTheme: Theme = {
   },
   tabs: {
     fontFamily: 'sans-serif',
-    backgroundColor: '#363636',
+    backgroundColor: '#757575',
     fontSize: '28px'
   },
   tabsActive: {
     fontFamily: 'sans-serif',
     fontWeight: 'bolder',
-    backgroundColor: '#757575',
-    fontSize: '28px'
+    backgroundColor: '#363636',
+    fontSize: '26px'
   },
   contentSection: {
     backgroundColor: '#363636'
@@ -80,10 +75,6 @@ const grayTheme: Theme = {
     fontFamily: 'sans-serif',
     fontWeight: 'bolder',
     color: '#F5F5F5'
-  },
-  scrollBar: {
-    scrollbarColor: '#DBDBDB',
-    scrollbarWidth: 'thin'
   }
 };
 
@@ -96,13 +87,13 @@ const blueTheme: Theme = {
   },
   tabs: {
     fontFamily: 'cursive',
-    backgroundColor: '#405275',
+    backgroundColor: '#212636',
     fontSize: '28px'
   },
   tabsActive: {
     fontFamily: 'cursive',
     fontWeight: 'bolder',
-    backgroundColor: '#212636',
+    backgroundColor: '#405275',
     color: '#F5F5F5',
     fontSize: '28px'
   },
@@ -118,10 +109,6 @@ const blueTheme: Theme = {
     fontFamily: 'cursive',
     fontWeight: 'bolder',
     color: '#212636'
-  },
-  scrollBar: {
-    scrollbarColor: '#889ADB',
-    scrollbarWidth: 'thin'
   }
 };
 
@@ -134,14 +121,14 @@ const yellowTheme: Theme = {
   },
   tabs: {
     fontFamily: 'garamond, serif',
-    backgroundColor: '#36312A',
+    backgroundColor: '#756B5B',
     color: '#F5DEBF',
     fontSize: '28px'
   },
   tabsActive: {
     fontFamily: 'garamond, serif',
     fontWeight: 'bolder',
-    backgroundColor: '#756B5B',
+    backgroundColor: '#36312A',
     fontSize: '28px',
     color: '#F5DEBF',
   },
@@ -157,10 +144,6 @@ const yellowTheme: Theme = {
     fontFamily: 'garamond, serif',
     fontWeight: 'bolder',
     color: '#F5DEBF'
-  },
-  scrollBar: {
-    scrollbarColor: '#DBC7AB',
-    scrollbarWidth: 'thin'
   }
 };
 
@@ -169,21 +152,22 @@ const redTheme: Theme = {
     backgroundColor: '#7e1206'
   },
   button: {
-    backgroundColor: '#360803',
+    backgroundColor: '#F5230C',
   },
   tabs: {
     fontFamily: 'sans-serif',
-    backgroundColor: '#F5230C',
-    fontSize: '28px'
+    backgroundColor: '#300803',
+    fontSize: '28px',
+    color: '#F5230C'
   },
   tabsActive: {
     fontFamily: 'sans-serif',
     fontWeight: 'bolder',
     backgroundColor: '#F5230C',
-    fontSize: '28px'
+    fontSize: '26px'
   },
   contentSection: {
-    backgroundColor: '#360803'
+    backgroundColor: '#300803'
   },
   text: {
     fontFamily: 'sans-serif',
@@ -194,10 +178,6 @@ const redTheme: Theme = {
     fontFamily: 'sans-serif',
     fontWeight: 'bolder',
     color: '#F5230C'
-  },
-  scrollBar: {
-    scrollbarColor: '#DB200B',
-    scrollbarWidth: 'thin'
   }
 };
 
