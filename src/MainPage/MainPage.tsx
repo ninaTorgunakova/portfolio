@@ -58,7 +58,11 @@ const MainPage = () => {
   return (
     <div className="main-page" style={theme.mainPage}>
       <div className="gallery">
-        <img src={images[currentImage].url} alt="" className={'gallery-photo ' + (imgsLoading ? 'loading' : '')}/> 
+        <div className={'gallery-photo-container ' + (imgsLoading ? 'loading' : '')}>
+          <div className="gallery-photo-side" onClick={toPreviousPhoto}></div>
+          <div className="gallery-photo-side" onClick={toNextPhoto}></div>
+          <img src={images[currentImage].url} alt="" className="gallery-photo"/>
+        </div>
         <div className="gallery-buttons">
           <button className="gallery-button" style={theme.button} onClick={toPreviousPhoto}>
             <GrPrevious></GrPrevious>
