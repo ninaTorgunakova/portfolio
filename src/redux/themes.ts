@@ -19,14 +19,14 @@ const whiteTheme: Theme = {
   },
   tabs: {
     fontFamily: 'garamond, serif',
-    fontSize: '28px',
+    fontSize: '2em',
     backgroundColor: '#362E26',
     color: '#F5D4AE'
   },
   tabsActive: {
     fontFamily: 'garamond, serif',
     fontWeight: 'bolder',
-    fontSize: '28px',
+    fontSize: '2em',
     backgroundColor: '#756553',
     color: '#F5D4AE'
   },
@@ -35,7 +35,7 @@ const whiteTheme: Theme = {
   },
   text: {
     fontFamily: 'garamond, serif',
-    fontSize: '20px',
+    fontSize: '1.5em',
     color: '#F5D4AE'
   },
   boldText: {
@@ -55,7 +55,7 @@ const grayTheme: Theme = {
   tabs: {
     fontFamily: 'sans-serif',
     backgroundColor: '#757575',
-    fontSize: '28px'
+    fontSize: '2em'
   },
   tabsActive: {
     fontFamily: 'sans-serif',
@@ -68,7 +68,7 @@ const grayTheme: Theme = {
   },
   text: {
     fontFamily: 'sans-serif',
-    fontSize: '20px',
+    fontSize: '1.5em',
     color: '#F5F5F5'
   },
   boldText: {
@@ -88,21 +88,21 @@ const blueTheme: Theme = {
   tabs: {
     fontFamily: 'cursive',
     backgroundColor: '#212636',
-    fontSize: '28px'
+    fontSize: '2em'
   },
   tabsActive: {
     fontFamily: 'cursive',
     fontWeight: 'bolder',
     backgroundColor: '#405275',
     color: '#F5F5F5',
-    fontSize: '28px'
+    fontSize: '2em'
   },
   contentSection: {
     backgroundColor: '#405275'
   },
   text: {
     fontFamily: 'cursive',
-    fontSize: '20px',
+    fontSize: '1.5em',
     color: '#212636'
   },
   boldText: {
@@ -123,13 +123,13 @@ const yellowTheme: Theme = {
     fontFamily: 'garamond, serif',
     backgroundColor: '#756B5B',
     color: '#F5DEBF',
-    fontSize: '28px'
+    fontSize: '2em'
   },
   tabsActive: {
     fontFamily: 'garamond, serif',
     fontWeight: 'bolder',
     backgroundColor: '#36312A',
-    fontSize: '28px',
+    fontSize: '2em',
     color: '#F5DEBF',
   },
   contentSection: {
@@ -137,7 +137,7 @@ const yellowTheme: Theme = {
   },
   text: {
     fontFamily: 'garamond, serif',
-    fontSize: '20px',
+    fontSize: '1.5em',
     color: '#F5DEBF'
   },
   boldText: {
@@ -157,7 +157,7 @@ const redTheme: Theme = {
   tabs: {
     fontFamily: 'sans-serif',
     backgroundColor: '#300803',
-    fontSize: '28px',
+    fontSize: '2em',
     color: '#F5230C'
   },
   tabsActive: {
@@ -171,7 +171,7 @@ const redTheme: Theme = {
   },
   text: {
     fontFamily: 'sans-serif',
-    fontSize: '20px',
+    fontSize: '1.5em',
     color: '#F5230C'
   },
   boldText: {
