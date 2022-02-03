@@ -55,13 +55,15 @@ const grayTheme: Theme = {
   tabs: {
     fontFamily: 'sans-serif',
     backgroundColor: '#757575',
-    fontSize: '2em'
+    fontSize: '2em',
+    color: '#F5F5F5'
   },
   tabsActive: {
     fontFamily: 'sans-serif',
     fontWeight: 'bolder',
     backgroundColor: '#363636',
-    fontSize: '26px'
+    fontSize: '2em',
+    color: '#F5F5F5'
   },
   contentSection: {
     backgroundColor: '#363636'
@@ -86,12 +88,12 @@ const blueTheme: Theme = {
     backgroundColor: '#405275',
   },
   tabs: {
-    fontFamily: 'cursive',
+    fontFamily: 'cursive, Lucida Handwriting',
     backgroundColor: '#212636',
     fontSize: '2em'
   },
   tabsActive: {
-    fontFamily: 'cursive',
+    fontFamily: 'cursive, Lucida Handwriting',
     fontWeight: 'bolder',
     backgroundColor: '#405275',
     color: '#F5F5F5',
@@ -101,12 +103,12 @@ const blueTheme: Theme = {
     backgroundColor: '#405275'
   },
   text: {
-    fontFamily: 'cursive',
+    fontFamily: 'cursive, Lucida Handwriting',
     fontSize: '1.5em',
     color: '#212636'
   },
   boldText: {
-    fontFamily: 'cursive',
+    fontFamily: 'cursive, Lucida Handwriting',
     fontWeight: 'bolder',
     color: '#212636'
   }
@@ -149,35 +151,36 @@ const yellowTheme: Theme = {
 
 const redTheme: Theme = {
   mainPage: {
-    backgroundColor: '#7e1206'
+    backgroundColor: '#A60000'
   },
   button: {
-    backgroundColor: '#F5230C',
+    backgroundColor: '#FF7373',
   },
   tabs: {
     fontFamily: 'sans-serif',
-    backgroundColor: '#300803',
+    backgroundColor: '#FF4040',
     fontSize: '2em',
-    color: '#F5230C'
+    color: '#300803'
   },
   tabsActive: {
     fontFamily: 'sans-serif',
     fontWeight: 'bolder',
-    backgroundColor: '#F5230C',
-    fontSize: '26px'
+    backgroundColor: '#BF3030',
+    fontSize: '2em',
+    color: '#300803'
   },
   contentSection: {
-    backgroundColor: '#300803'
+    backgroundColor: '#BF3030'
   },
   text: {
     fontFamily: 'sans-serif',
     fontSize: '1.5em',
-    color: '#F5230C'
+    color: '#300803'
   },
   boldText: {
     fontFamily: 'sans-serif',
     fontWeight: 'bolder',
-    color: '#F5230C'
+    color: '#300803'
   }
 };
 
