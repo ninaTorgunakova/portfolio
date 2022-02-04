@@ -151,36 +151,36 @@ const yellowTheme: Theme = {
 
 const redTheme: Theme = {
   mainPage: {
-    backgroundColor: '#A60000'
+    backgroundColor: '#B51200'
   },
   button: {
-    backgroundColor: '#FF7373',
+    backgroundColor: '#750C00',
   },
   tabs: {
     fontFamily: 'sans-serif',
-    backgroundColor: '#FF4040',
+    backgroundColor: '#750C00',
     fontSize: '2em',
-    color: '#300803'
+    color: '#F51A00'
   },
   tabsActive: {
     fontFamily: 'sans-serif',
     fontWeight: 'bolder',
-    backgroundColor: '#BF3030',
+    backgroundColor: '#360500',
     fontSize: '2em',
-    color: '#300803'
+    color: '#F51A00'
   },
   contentSection: {
-    backgroundColor: '#BF3030'
+    backgroundColor: '#360500'
   },
   text: {
     fontFamily: 'sans-serif',
     fontSize: '1.5em',
-    color: '#300803'
+    color: '#F51A00'
   },
   boldText: {
     fontFamily: 'sans-serif',
     fontWeight: 'bolder',
-    color: '#300803'
+    color: '#F51A00'
   }
 };
 
