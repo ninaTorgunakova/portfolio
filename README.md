@@ -6,7 +6,7 @@ To view my portfolio: https://nina-torgunakova-bj0mu9ame-ninatorgunakova.vercel.
 
 ## Preview
 
-![Screenshot](preview.jpg)
+![Screenshot](preview.JPG)
 
 ## How to start project
 
