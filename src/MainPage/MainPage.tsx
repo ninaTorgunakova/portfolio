@@ -74,9 +74,9 @@ const MainPage = () => {
       </div>
       <div className="content">
         <div className="content-tabs">
-          <button className="content-tab-button" style={(currentTab === 0 ? theme.tabsActive : theme.tabs)} onClick={() => setCurrentTab(0)}>Обо мне</button>
-          <button className="content-tab-button" style={(currentTab === 1 ? theme.tabsActive : theme.tabs)} onClick={() => setCurrentTab(1)}>Мои работы</button>
-          <button className="content-tab-button" style={(currentTab === 2 ? theme.tabsActive : theme.tabs)} onClick={() => setCurrentTab(2)}>Контакты</button>
+          <button className="content-tab-button" style={(currentTab === 0 ? theme.tabsActive : theme.tabs)} onClick={() => setCurrentTab(0)}>About me</button>
+          <button className="content-tab-button" style={(currentTab === 1 ? theme.tabsActive : theme.tabs)} onClick={() => setCurrentTab(1)}>My projects</button>
+          <button className="content-tab-button" style={(currentTab === 2 ? theme.tabsActive : theme.tabs)} onClick={() => setCurrentTab(2)}>Contacts</button>
         </div>
         <div className="content-section" style={theme.contentSection}>
           {currentTab === 0 && <About theme={theme}></About>}
