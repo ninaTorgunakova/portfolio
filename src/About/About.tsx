@@ -5,37 +5,35 @@ const About = (state: State) => {
   return (
     <div className="about-content">
       <p style={state.theme.text}>
-        Меня зовут <span style={state.theme.boldText}>Нина</span>, мне 22 года и я работаю frontend
-        разработчиком. Пару лет после наступления 
-        своего совершеннолетия
-        я работала копирайтером, но вскоре решила, что писать код мне
-        нравится гораздо больше, чем статьи.
+            My name is Nina, I'm 23 years old and I work as a frontend developer.
+        I had been working as a copywriter for a couple of years while studying at university,
+        but soon decided that I like to write code much more than articles.
       </p>
       <p style={state.theme.text}>
-            В 2021 году я окончила НГТУ по направлению 
-        «Информатика и вычислительная техника».
-        В рамках диплома я разработала онлайн-консультанта
-        для абитуриентов НГТУ на языках <span style={state.theme.boldText}>Python </span>
+          In 2021, I graduated from NSTU with a CS degree.
+        As a part of my diploma I developed the online consultant
+        for NSTU applicants, used languages <span style={state.theme.boldText}>Python </span>
         и <span style={state.theme.boldText}>TypeScript</span>.
       </p>
       <p style={state.theme.text}>
-        Я работаю в компании, где frontend-часть
-        создаётся на <span style={state.theme.boldText}>Angular</span>, 
-        но также у меня был опыт коммерческой
-        разработки на <span style={state.theme.boldText}>React. </span>
-        Я нахожу свой интерес и вижу плюсы в обоих инструментах.
+          Currently I'm working in a company where the frontend part
+        is created by <span style={state.theme.boldText}>Angular</span>, 
+        but also I had commercial experience
+        development by <span style={state.theme.boldText}>React. </span>
+        I find my enthusiasm and see the pros in both languages.
       </p>
       <p style={state.theme.text}>
-            В свободное от работы время я люблю решать алгоритмические задачи 
-        на Leetcode -  это мой любимый вид брейншторма
-        и тренировки умения находить эффективное решение проблемы
-        в сжатые сроки. Также я постепенно изучаю UX, так как думаю,
-        что продвинутому frontend-разработчику стоит брать на себя 
-        ответственность за опыт взаимодействия с интерфейсом.
+          In my free time I like to solve algorithmic problems
+        on Leetcode - this is my favorite kind of brainstorm
+        and training the ability to find an effective problem's solution
+        in a short time. I'm also learning UX gradually beacause I think
+        that advanced frontend developer should take on
+        responsibility for the experience of interacting with the his interface.
       </p>
       <p style={state.theme.text}>
-            В свободное от программирования время я увлекаюсь exotic pole dance.
-        Также я кандидат в мастера спорта по пулевой стрельбе.
+            In my spare time from programming, I'm fond of pole dance.
+        I am also a candidate master of sports in bullet shooting
+        and a great fan of books about productivity.
       </p>
     </div>
   );
