@@ -2,7 +2,7 @@
 
 My portfolio website with personal information, projects and favorite photos.
 
-To view my portfolio: https://nina-torgunakova-bj0mu9ame-ninatorgunakova.vercel.app/
+To view my portfolio: https://nina-torgunakova.vercel.app/
 
 ## Preview
 
