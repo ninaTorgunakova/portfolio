@@ -13,8 +13,8 @@ const Contacts = (state: State) => {
         <a href="https://vk.com/seagull_nina" className="link" target="_blank" rel="noreferrer">
           <img src="icons/vk.png" alt="" className="contact-icon"></img>
         </a>
-        <a href="https://www.instagram.com/nina_seagull/" className="link" target="_blank" rel="noreferrer">
-          <img src="icons/instagram.png" alt="" className="contact-icon"></img>
+        <a href="https://leetcode.com/Nina_Torgunakova/" className="link" target="_blank" rel="noreferrer">
+          <img src="icons/leetcode.png" alt="" className="contact-icon"></img>
         </a>
       </div>
     </div>

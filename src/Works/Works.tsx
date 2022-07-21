@@ -13,9 +13,15 @@ const Works = (state: State) => {
   }, {
     title: "William Shakespeare's quote generator",
     description: "Quote generator of the wisest of writers.",
-    iconPath: 'icons/personal.png',
+    iconPath: 'icons/shakespeare.png',
     linkWeb: 'https://shakespeare-quotes-generator.vercel.app/',
     linkCode: 'https://github.com/ninaTorgunakova/shakespeare-quotes-generator'
+  }, {
+    title: "Acropolis Secret",
+    description: "Landing page for imaginary restaurant with cozy atmosphere and delicious food.",
+    iconPath: 'icons/restaurant.png',
+    linkWeb: 'https://restaurant-project-theta.vercel.app/',
+    linkCode: 'https://github.com/ninaTorgunakova/restaurant-project'
   }];
   return (
     <div className="work-content">
