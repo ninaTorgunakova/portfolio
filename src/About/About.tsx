@@ -3,7 +3,7 @@ import './About.sass';
 
 const About = (state: State) => {
   return (
-    <div className="about-content">
+    <div className='about-content'>
       <p style={state.theme.text}>
             My name is Nina, I'm 23 years old and I work as a frontend developer.
         I had been working as a copywriter for a couple of years while studying at university,
