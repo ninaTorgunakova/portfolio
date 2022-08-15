@@ -45,6 +45,115 @@ const whiteTheme: Theme = {
   }
 };
 
+const pinkTheme: Theme = {
+  mainPage: {
+    backgroundColor: '#CD0074'
+  },
+  button: {
+    backgroundColor: '#EE6B9E',
+  },
+  tabs: {
+    fontFamily: 'garamond, serif',
+    fontSize: '2em',
+    backgroundColor: '#EE6B9E',
+    color: '000000'
+  },
+  tabsActive: {
+    fontFamily: 'garamond, serif',
+    fontWeight: 'bolder',
+    fontSize: '2em',
+    backgroundColor: '#EE6B9E',
+    color: '#000000'
+  },
+  contentSection: {
+    backgroundColor: '#EE6B9E'
+  },
+  text: {
+    fontFamily: 'garamond, serif',
+    fontSize: '1.5em',
+    color: '#900038',
+    fontWeight: 'bolder'
+  },
+  boldText: {
+    fontFamily: 'garamond, serif',
+    fontWeight: 'bolder',
+    color: '#900038'
+  }
+};
+
+const oliveTheme: Theme = {
+  mainPage: {
+    backgroundColor: '#BF9230'
+  },
+  button: {
+    backgroundColor: '#A67100',
+  },
+  tabs: {
+    fontFamily: 'garamond, serif',
+    fontSize: '2em',
+    backgroundColor: '#A67100',
+    color: '000000'
+  },
+  tabsActive: {
+    fontFamily: 'garamond, serif',
+    fontWeight: 'bolder',
+    fontSize: '2em',
+    backgroundColor: '#A67100',
+    color: '#000000'
+  },
+  contentSection: {
+    backgroundColor: '#A67100'
+  },
+  text: {
+    fontFamily: 'garamond, serif',
+    fontSize: '1.5em',
+    color: '#000000',
+    fontWeight: '700'
+  },
+  boldText: {
+    fontFamily: 'garamond, serif',
+    fontWeight: 'bolder',
+    color: '#000000'
+  }
+};
+
+const powderyTheme: Theme = {
+  mainPage: {
+    backgroundColor: '#FF5D40'
+  },
+  button: {
+    backgroundColor: '#BF4630',
+  },
+  tabs: {
+    fontFamily: 'garamond, serif',
+    fontSize: '2em',
+    backgroundColor: '#BF4630',
+    color: '000000'
+  },
+  tabsActive: {
+    fontFamily: 'garamond, serif',
+    fontWeight: 'bolder',
+    fontSize: '2em',
+    backgroundColor: '#BF4630',
+    color: '#000000'
+  },
+  contentSection: {
+    backgroundColor: '#BF4630'
+  },
+  text: {
+    fontFamily: 'garamond, serif',
+    fontSize: '1.5em',
+    color: '#000000',
+    fontWeight: 'bolder'
+  },
+  boldText: {
+    fontFamily: 'garamond, serif',
+    fontWeight: 'bolder',
+    color: '#000000'
+  }
+};
+
+
 const grayTheme: Theme = {
   mainPage: {
     backgroundColor: '#323232'
@@ -184,4 +293,5 @@ const redTheme: Theme = {
   }
 };
 
-export const themes: Theme[] = [whiteTheme, redTheme, yellowTheme, blueTheme, grayTheme];
+
+export const themes: Theme[] = [pinkTheme, oliveTheme, powderyTheme, whiteTheme, redTheme, yellowTheme, blueTheme, grayTheme];
