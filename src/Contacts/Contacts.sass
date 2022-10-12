@@ -1,6 +1,17 @@
-.contacts-content
+.contacts-list
+  display: flex
+  flex-direction: column
+  gap: 10px
   padding: 25px
   font-size: 1.5em
+  @media screen and (min-width: 600px) and (max-width: 900px)
+    padding: 12px
+    font-size: 1.2em
+  @media screen and (min-width: 430px) and (max-width: 650px)
+    padding: 8px
+    font-size: 1.2em
+  @media screen and (max-width: 350px)
+    font-size: 1.2em
   
 .contact-icon
   width: 50px
@@ -15,32 +26,6 @@
     margin: 1px 1px 1px 0
 
 .contact-icons
-  margin-top: 16px
-
-.link
-  &:not(:first-child)
-    margin-left: 50px
-
-.email
-  margin-top: 8px
-
-@media screen and (min-width: 600px) and (max-width: 900px)
-  .contacts-content
-    padding: 12px
-
-@media screen and (min-width: 430px) and (max-width: 650px)
-  .link
-    &:not(:first-child)
-      margin-left: 20px
-  .contacts-content
-    padding: 8px
-
-@media screen and (max-width: 430px)
-  .link
-    &:not(:first-child)
-      margin-left: 10px
-  .contacts-content
-    padding: 6px
-  .contact-icon
-    width: 18px
-    height: 18px
+  margin-top: 20px
+  display: flex
+  gap: 10px

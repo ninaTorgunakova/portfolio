@@ -1,11 +1,7 @@
 export const images: { url: string }[] = [{
-    url: "photos/pink.JPG"
-  }, {
-    url: "photos/olive.JPG"
+    url: "photos/white.JPG"
   }, {
     url: "photos/powdery.JPG"
-  }, {
-    url: "photos/white.JPG"
   }, {
     url: "photos/red.JPG"
   }, {
@@ -14,5 +10,9 @@ export const images: { url: string }[] = [{
     url: "photos/blue.JPG"
   }, {
     url: "photos/gray.JPG"
+  }, {
+    url: "photos/pink.JPG"
+  }, {
+    url: "photos/olive.JPG"
   }
 ];

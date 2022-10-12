@@ -3,18 +3,19 @@ import './Contacts.sass';
 
 const Contacts = (state: State) => {
   return (
-    <div className='contacts-content'>
-      <div style={state.theme.boldText} className='phone'>+7 913 450 58 02</div>
-      <div style={state.theme.boldText} className='email'>ninatorgunakova@gmail.com</div>
+    <div className='contacts-list'>
+      <span style={state.theme.boldText}>+995 574 895 822 (Georgia)</span>
+      <span style={state.theme.boldText}>ninatorgunakova@gmail.com</span>
+      <a href="https://t.me/seagullNina" target="_blank" className="link" style={state.theme.boldText}>tg: @seagullNina</a>
       <div className='contact-icons'>
+        <a href="https://www.linkedin.com/in/nina-torgunakova/" className="link" target="_blank">
+          <img src="icons/linkedin.png" alt="" className="contact-icon"></img>
+        </a>
         <a href='https://github.com/ninaTorgunakova' className='link' target='_blank' rel='noreferrer'>
           <img src='icons/github.png' alt='' className='contact-icon'></img>
         </a>
-        <a href='https://vk.com/seagull_nina' className='link' target='_blank' rel='noreferrer'>
-          <img src='icons/vk.png' alt='' className='contact-icon'></img>
-        </a>
-        <a href='https://leetcode.com/Nina_Torgunakova/' className='link' target='_blank' rel='noreferrer'>
-          <img src='icons/leetcode.png' alt='' className='contact-icon'></img>
+        <a href="https://www.instagram.com/nina_seagull/" className="link" target="_blank">
+          <img src="icons/instagram.png" alt="" className="contact-icon"></img>
         </a>
       </div>
     </div>

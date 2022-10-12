@@ -56,7 +56,7 @@ const pinkTheme: Theme = {
     fontFamily: 'garamond, serif',
     fontSize: '2em',
     backgroundColor: '#EE6B9E',
-    color: '000000'
+    color: '#000000'
   },
   tabsActive: {
     fontFamily: 'garamond, serif',
@@ -72,7 +72,7 @@ const pinkTheme: Theme = {
     fontFamily: 'garamond, serif',
     fontSize: '1.5em',
     color: '#900038',
-    fontWeight: 'bolder'
+    fontWeight: 'lighter'
   },
   boldText: {
     fontFamily: 'garamond, serif',
@@ -92,7 +92,7 @@ const oliveTheme: Theme = {
     fontFamily: 'garamond, serif',
     fontSize: '2em',
     backgroundColor: '#A67100',
-    color: '000000'
+    color: '#000000'
   },
   tabsActive: {
     fontFamily: 'garamond, serif',
@@ -128,7 +128,7 @@ const powderyTheme: Theme = {
     fontFamily: 'garamond, serif',
     fontSize: '2em',
     backgroundColor: '#BF4630',
-    color: '000000'
+    color: '#000000'
   },
   tabsActive: {
     fontFamily: 'garamond, serif',
@@ -144,7 +144,7 @@ const powderyTheme: Theme = {
     fontFamily: 'garamond, serif',
     fontSize: '1.5em',
     color: '#000000',
-    fontWeight: 'bolder'
+    fontWeight: 'lighter'
   },
   boldText: {
     fontFamily: 'garamond, serif',
@@ -153,13 +153,12 @@ const powderyTheme: Theme = {
   }
 };
 
-
 const grayTheme: Theme = {
   mainPage: {
     backgroundColor: '#323232'
   },
   button: {
-    backgroundColor: '#363636',
+    backgroundColor: '#363636'
   },
   tabs: {
     fontFamily: 'sans-serif',
@@ -263,7 +262,7 @@ const redTheme: Theme = {
     backgroundColor: '#B51200'
   },
   button: {
-    backgroundColor: '#750C00',
+    backgroundColor: '#520800',
   },
   tabs: {
     fontFamily: 'sans-serif',
@@ -274,12 +273,12 @@ const redTheme: Theme = {
   tabsActive: {
     fontFamily: 'sans-serif',
     fontWeight: 'bolder',
-    backgroundColor: '#360500',
+    backgroundColor: '#520800',
     fontSize: '2em',
     color: '#F51A00'
   },
   contentSection: {
-    backgroundColor: '#360500'
+    backgroundColor: '#520800'
   },
   text: {
     fontFamily: 'sans-serif',
@@ -294,4 +293,4 @@ const redTheme: Theme = {
 };
 
 
-export const themes: Theme[] = [pinkTheme, oliveTheme, powderyTheme, whiteTheme, redTheme, yellowTheme, blueTheme, grayTheme];
+export const themes: Theme[] = [whiteTheme, powderyTheme, redTheme, yellowTheme, blueTheme, grayTheme, pinkTheme, oliveTheme];
