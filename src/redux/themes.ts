@@ -25,6 +25,7 @@ const whiteTheme: Theme = {
   },
   tabsActive: {
     fontFamily: 'garamond, serif',
+    fontWeight: 'bolder',
     fontSize: '1.8em',
     backgroundColor: '#756553',
     color: '#F5D4AE'
@@ -59,6 +60,7 @@ const pinkTheme: Theme = {
   },
   tabsActive: {
     fontFamily: 'garamond, serif',
+    fontWeight: 'bolder',
     fontSize: '1.8em',
     backgroundColor: '#EE6B9E',
     color: '#000000'
@@ -94,6 +96,7 @@ const oliveTheme: Theme = {
   },
   tabsActive: {
     fontFamily: 'garamond, serif',
+    fontWeight: 'bolder',
     fontSize: '1.8em',
     backgroundColor: '#A67100',
     color: '#000000'
@@ -129,6 +132,7 @@ const powderyTheme: Theme = {
   },
   tabsActive: {
     fontFamily: 'garamond, serif',
+    fontWeight: 'bolder',
     fontSize: '1.8em',
     backgroundColor: '#BF4630',
     color: '#000000'
@@ -164,6 +168,7 @@ const grayTheme: Theme = {
   },
   tabsActive: {
     fontFamily: 'sans-serif',
+    fontWeight: 'bolder',
     backgroundColor: '#363636',
     fontSize: '1.8em',
     color: '#F5F5F5'
@@ -197,6 +202,7 @@ const blueTheme: Theme = {
   },
   tabsActive: {
     fontFamily: 'Inter',
+    fontWeight: 'bolder',
     backgroundColor: '#405275',
     color: '#F5F5F5',
     fontSize: '1.8em'
@@ -231,6 +237,7 @@ const yellowTheme: Theme = {
   },
   tabsActive: {
     fontFamily: 'garamond, serif',
+    fontWeight: 'bolder',
     backgroundColor: '#36312A',
     fontSize: '1.8em',
     color: '#F5DEBF',
@@ -265,6 +272,7 @@ const redTheme: Theme = {
   },
   tabsActive: {
     fontFamily: 'sans-serif',
+    fontWeight: 'bolder',
     backgroundColor: '#520800',
     fontSize: '1.8em',
     color: '#F51A00'
