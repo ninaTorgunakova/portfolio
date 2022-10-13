@@ -196,12 +196,12 @@ const blueTheme: Theme = {
     backgroundColor: '#405275',
   },
   tabs: {
-    fontFamily: 'cursive, Lucida Handwriting',
+    fontFamily: 'Inter',
     backgroundColor: '#212636',
     fontSize: '2em'
   },
   tabsActive: {
-    fontFamily: 'cursive, Lucida Handwriting',
+    fontFamily: 'Inter',
     fontWeight: 'bolder',
     backgroundColor: '#405275',
     color: '#F5F5F5',
@@ -211,12 +211,12 @@ const blueTheme: Theme = {
     backgroundColor: '#405275'
   },
   text: {
-    fontFamily: 'cursive, Lucida Handwriting',
+    fontFamily: 'Inter',
     fontSize: '1.5em',
     color: '#212636'
   },
   boldText: {
-    fontFamily: 'cursive, Lucida Handwriting',
+    fontFamily: 'Inter',
     fontWeight: 'bolder',
     color: '#212636'
   }
