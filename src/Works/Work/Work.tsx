@@ -11,10 +11,10 @@ export interface WorkInfo {
 
 interface WorkProps {
   info: WorkInfo;
-  theme: Theme
+  theme: Theme;
 }
 
-const Work = (props: WorkProps) => {
+const Work = (props: WorkProps): JSX.Element => {
   return (
     <div className='card'>
       <img alt='' src={props.info.iconPath} className='work-icon'></img>

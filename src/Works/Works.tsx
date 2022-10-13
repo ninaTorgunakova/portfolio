@@ -3,7 +3,7 @@ import { WorkInfo } from './Work/Work';
 import Work from './Work/Work';
 import './Works.sass';
 
-const Works = (state: State) => {
+const Works = (state: State): JSX.Element => {
   const works: WorkInfo[] = [{
     title: 'Personal site',
     description: 'A small personal site with information about me, pet-projects and favorite photos.',
@@ -25,7 +25,7 @@ const Works = (state: State) => {
   }];
   return (
     <div className='work-content'>
-      {works.map((work, i) => <Work key={i} info={work} theme={state.theme}></Work>)}
+      { works.map((work, i) => <Work key={i} info={work} theme={state.theme}></Work>) }
     </div>
   );
 };

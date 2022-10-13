@@ -11,7 +11,11 @@ import Works from '../Works/Works';
 import Contacts from '../Contacts/Contacts';
 import './MainPage.sass';
 
-const MainPage = () => {
+const MainPage = (): JSX.Element => {
+  const ABOUT_TAB_INDEX = 0;
+  const WORKS_TAB_INDEX = 1;
+  const CONTACTS_TAB_INDEX = 2;
+
   const [currentImage, setCurrentImage] = useState(0);
   const [currentTab, setCurrentTab] = useState(0);
   const [imgsLoading, setImgsLoading] = useState(true);
@@ -23,65 +27,78 @@ const MainPage = () => {
         const loadImg = new Image();
         loadImg.src = image.url;
         loadImg.onload = () => resolve(image.url);
-        loadImg.onerror = err => reject(err);
+        loadImg.onerror = error => reject(error);
       });
     }
     Promise.all(images.map(image => loadImage(image)))
     .then(() => setImgsLoading(false))
   }, []);
 
-  const toPreviousPhoto = () => {
+  const toPreviousPhoto = (): void => {
     const index = currentImage === 0 ? images.length - 1 : currentImage - 1;
     switchPhoto(index);
-  }
-  const toNextPhoto = () => {
+  };
+
+  const toNextPhoto = (): void => {
     const index = currentImage === images.length - 1 ? 0 : currentImage + 1;
     switchPhoto(index);
-  }
+  };
 
-  const changeTheme = (theme: Theme) => {
+  const changeTheme = (theme: Theme): void => {
     dispatch(applyTheme(theme));
-  }
+  };
 
   const theme: Theme = useSelector((state: State) => state.theme);
 
-  const switchPhoto = (index: number) => {
+  const switchPhoto = (index: number): void => {
     setImgsLoading(true);
     setCurrentImage(index);
     setTimeout(() => {
       const theme = themes[index];
       changeTheme(theme)
       setImgsLoading(false);
-    }, 500);
-  }
+    }, 200);
+  };
 
   return (
     <div className='main-page' style={theme.mainPage}>
       <div className='gallery'>
-        <div className={'gallery-photo-container ' + (imgsLoading ? 'loading' : '')}>
-          <div className='gallery-photo-side' onClick={toPreviousPhoto}></div>
-          <div className='gallery-photo-side' onClick={toNextPhoto}></div>
-          <img src={images[currentImage].url} alt='' className='gallery-photo'/>
+        <div className={'photo-container ' + (imgsLoading ? 'loading' : '')}>
+          <div className='photo-side' onClick={toPreviousPhoto}></div>
+          <div className='photo-side' onClick={toNextPhoto}></div>
+          <img src={images[currentImage].url} alt='' className='photo'/>
         </div>
-        <div className='gallery-buttons'>
-          <button className='gallery-button' style={theme.button} onClick={toPreviousPhoto}>
+        <div className='buttons'>
+          <button className='button' style={theme.button} onClick={toPreviousPhoto}>
             <GrPrevious></GrPrevious>
           </button>
-          <button className='gallery-button' style={theme.button} onClick={toNextPhoto}>
+          <button className='button' style={theme.button} onClick={toNextPhoto}>
             <GrNext></GrNext>   
           </button>
         </div>
       </div>
       <div className='content'>
-        <div className='content-tabs'>
-          <button className='content-tab-button' style={(currentTab === 0 ? theme.tabsActive : theme.tabs)} onClick={() => setCurrentTab(0)}>About me</button>
-          <button className='content-tab-button' style={(currentTab === 1 ? theme.tabsActive : theme.tabs)} onClick={() => setCurrentTab(1)}>My projects</button>
-          <button className='content-tab-button' style={(currentTab === 2 ? theme.tabsActive : theme.tabs)} onClick={() => setCurrentTab(2)}>Contacts</button>
+        <div className='tabs'>
+          <button className='tab-button'
+              style={(currentTab === ABOUT_TAB_INDEX ? theme.tabsActive : theme.tabs)}
+              onClick={() => setCurrentTab(0)}>
+            About me
+          </button>
+          <button className='tab-button'
+              style={(currentTab === WORKS_TAB_INDEX ? theme.tabsActive : theme.tabs)}
+              onClick={() => setCurrentTab(1)}>
+            My projects
+          </button>
+          <button className='tab-button'
+              style={(currentTab === CONTACTS_TAB_INDEX ? theme.tabsActive : theme.tabs)}
+              onClick={() => setCurrentTab(2)}>
+            Contacts
+          </button>
         </div>
-        <div className='content-section' style={theme.contentSection}>
-          {currentTab === 0 && <About theme={theme}></About>}
-          {currentTab === 1 && <Works theme={theme}></Works>}
-          {currentTab === 2 && <Contacts theme={theme}></Contacts>}
+        <div className='section' style={theme.contentSection}>
+          {currentTab === ABOUT_TAB_INDEX && <About theme={theme}></About>}
+          {currentTab === WORKS_TAB_INDEX && <Works theme={theme}></Works>}
+          {currentTab === CONTACTS_TAB_INDEX && <Contacts theme={theme}></Contacts>}
         </div>
       </div>
     </div>

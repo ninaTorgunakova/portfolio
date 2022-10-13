@@ -5,112 +5,99 @@
   padding: 30px
   align-items: flex-start
   justify-content: center
-  @media screen and (max-width: 600px)
+  @media screen and (max-width: 650px)
     flex-direction: column
     align-items: center
 
-.gallery-photo-container
-  max-width: 500px
-  opacity: 1
-  transition: opacity 0.5s
-  position: relative
-  &.loading
-    opacity: 0
-    transition: none
-  @media screen and (min-width: 650px) and (max-width: 900px)
-    max-width: 400px
-  @media screen and (max-width: 430px)
-    max-width: 400px
-
-.gallery-photo-side
-  position: absolute
-  top: 0
-  right: 0
-  width: 50%
-  height: 100%
-  cursor: pointer
-  &:first-child
-    left: 0
-
-.gallery-photo
-  width: 100%
-  height: 100%
-
-.gallery-buttons
-  display: flex
-  justify-content: center
-  & .gallery-button
-    width: 100%
-    border: none
-    padding: 15px 32px
-    text-align: center
-    font-size: 1.5em
-    cursor: pointer
+.gallery
+  & .photo-container
+    max-width: 500px
     opacity: 1
-    &:active
-      box-shadow: 0 0 15px 2px
-      margin: 1px 1px 1px 0
-    &:hover
-      opacity: 0.5
-    @media screen and (min-width: 430px) and (max-width: 650px)
-      padding: 10px 20px
+    transition: opacity 0.5s
+    position: relative
+    & .loading
+      opacity: 0
+      transition: none
     @media screen and (max-width: 430px)
-      padding: 8px 10px
+      max-width: 400px
+    & .photo-side
+      position: absolute
+      top: 0
+      right: 0
+      width: 50%
+      height: 100%
+      cursor: pointer
+      &:first-child
+        left: 0
+    & .photo
+      width: 100%
+      height: 100%
+      border-radius: 5px
+  & .buttons
+    display: flex
+    justify-content: center
+    & .button
+      width: 100%
+      border: none
+      padding: 16px 32px
+      text-align: center
+      font-size: 1.5em
+      cursor: pointer
+      opacity: 1
+      &:active
+        box-shadow: 0 2px 15px 2px
+        margin: 1px 1px 1px 0
+      &:hover
+        opacity: 0.5
+      @media screen and (min-width: 430px) and (max-width: 600px)
+        padding: 10px 20px
+      @media screen and (max-width: 430px)
+        padding: 8px 10px
 
 .content
-  margin-left: 10%
+  margin-left: 7%
   width: 50vw
   height: 100%
-  @media screen and (min-width: 650px) and (max-width: 900px)
+  @media screen and (max-width: 900px)
+    width: 100%
+  @media screen and (min-width: 600px) and (max-width: 900px)
     margin-left: 4%
-    width: 100%
-  @media screen and (min-width: 430px) and (max-width: 650px)
-    margin-left: 2%
-    width: 100%
-  @media screen and (max-width: 430px)
-    margin-left: 0
-    margin-top: 20px
-    width: 100%
-
-.content-tabs
-  display: flex
-  gap: 10px
-  margin-bottom: 10px
-  @media screen and (min-width: 430px) and (max-width: 650px)
-    font-size: 12px
   @media screen and (max-width: 600px)
-    margin-top: 20px
-  @media screen and (max-width: 430px)
-    font-size: 10px
-
-.content-tab-button
-  width: 100%
-  border: none
-  padding: 15px 32px
-  text-align: center
-  cursor: pointer
-  opacity: 1
-  box-shadow: black 1px 1px 2px 2px
-  border-radius: 5px
-  &:active
-    box-shadow: 0 0 15px 2px
-    margin: 1px 1px 1px 0
-  &:hover
-    opacity: 0.5
-  @media screen and (min-width: 650px) and (max-width: 900px)
-    padding: 10px 12px
-  @media screen and (min-width: 430px) and (max-width: 650px)
-    padding: 7px 10px
-  @media screen and (max-width: 430px)
-    padding: 2px 4px
-    height: 50px
-
-.content-section
-  height: 80vh
-  width: 100%
-  overflow-y: auto
-  border-radius: 5px
-  font-size: 1em
+    margin-left: 0
+  & .section
+    height: 80vh
+    width: 100%
+    overflow-y: auto
+    border-radius: 5px
+    font-size: 1em
+  & .tabs
+    display: flex
+    gap: 10px
+    margin-bottom: 10px
+    @media screen and (min-width: 430px) and (max-width: 600px)
+      font-size: 12px
+    @media screen and (max-width: 600px)
+      margin-top: 20px
+    @media screen and (max-width: 430px)
+      font-size: 10px
+    & .tab-button
+      width: 100%
+      border: none
+      padding: 10px 20px
+      text-align: center
+      cursor: pointer
+      box-shadow: black 1px 1px 2px 2px
+      border-radius: 5px
+      &:active
+        box-shadow: 0 0 15px 2px
+        margin-left: 1px
+      &:hover
+        opacity: 0.5
+      @media screen and (min-width: 500px) and (max-width: 800px)
+        padding: 7px
+      @media screen and (max-width: 500px)
+        padding: 2px 4px
+        height: 50px
 
 ::-webkit-scrollbar 
   height: 12px

@@ -19,14 +19,13 @@ const whiteTheme: Theme = {
   },
   tabs: {
     fontFamily: 'garamond, serif',
-    fontSize: '2em',
+    fontSize: '1.8em',
     backgroundColor: '#362E26',
     color: '#F5D4AE'
   },
   tabsActive: {
     fontFamily: 'garamond, serif',
-    fontWeight: 'bolder',
-    fontSize: '2em',
+    fontSize: '1.8em',
     backgroundColor: '#756553',
     color: '#F5D4AE'
   },
@@ -54,14 +53,13 @@ const pinkTheme: Theme = {
   },
   tabs: {
     fontFamily: 'garamond, serif',
-    fontSize: '2em',
+    fontSize: '1.8em',
     backgroundColor: '#EE6B9E',
     color: '#000000'
   },
   tabsActive: {
     fontFamily: 'garamond, serif',
-    fontWeight: 'bolder',
-    fontSize: '2em',
+    fontSize: '1.8em',
     backgroundColor: '#EE6B9E',
     color: '#000000'
   },
@@ -90,14 +88,13 @@ const oliveTheme: Theme = {
   },
   tabs: {
     fontFamily: 'garamond, serif',
-    fontSize: '2em',
+    fontSize: '1.8em',
     backgroundColor: '#A67100',
     color: '#000000'
   },
   tabsActive: {
     fontFamily: 'garamond, serif',
-    fontWeight: 'bolder',
-    fontSize: '2em',
+    fontSize: '1.8em',
     backgroundColor: '#A67100',
     color: '#000000'
   },
@@ -126,14 +123,13 @@ const powderyTheme: Theme = {
   },
   tabs: {
     fontFamily: 'garamond, serif',
-    fontSize: '2em',
+    fontSize: '1.8em',
     backgroundColor: '#BF4630',
     color: '#000000'
   },
   tabsActive: {
     fontFamily: 'garamond, serif',
-    fontWeight: 'bolder',
-    fontSize: '2em',
+    fontSize: '1.8em',
     backgroundColor: '#BF4630',
     color: '#000000'
   },
@@ -163,14 +159,13 @@ const grayTheme: Theme = {
   tabs: {
     fontFamily: 'sans-serif',
     backgroundColor: '#757575',
-    fontSize: '2em',
+    fontSize: '1.8em',
     color: '#F5F5F5'
   },
   tabsActive: {
     fontFamily: 'sans-serif',
-    fontWeight: 'bolder',
     backgroundColor: '#363636',
-    fontSize: '2em',
+    fontSize: '1.8em',
     color: '#F5F5F5'
   },
   contentSection: {
@@ -198,14 +193,13 @@ const blueTheme: Theme = {
   tabs: {
     fontFamily: 'Inter',
     backgroundColor: '#212636',
-    fontSize: '2em'
+    fontSize: '1.8em'
   },
   tabsActive: {
     fontFamily: 'Inter',
-    fontWeight: 'bolder',
     backgroundColor: '#405275',
     color: '#F5F5F5',
-    fontSize: '2em'
+    fontSize: '1.8em'
   },
   contentSection: {
     backgroundColor: '#405275'
@@ -233,13 +227,12 @@ const yellowTheme: Theme = {
     fontFamily: 'garamond, serif',
     backgroundColor: '#756B5B',
     color: '#F5DEBF',
-    fontSize: '2em'
+    fontSize: '1.8em'
   },
   tabsActive: {
     fontFamily: 'garamond, serif',
-    fontWeight: 'bolder',
     backgroundColor: '#36312A',
-    fontSize: '2em',
+    fontSize: '1.8em',
     color: '#F5DEBF',
   },
   contentSection: {
@@ -267,14 +260,13 @@ const redTheme: Theme = {
   tabs: {
     fontFamily: 'sans-serif',
     backgroundColor: '#750C00',
-    fontSize: '2em',
+    fontSize: '1.8em',
     color: '#F51A00'
   },
   tabsActive: {
     fontFamily: 'sans-serif',
-    fontWeight: 'bolder',
     backgroundColor: '#520800',
-    fontSize: '2em',
+    fontSize: '1.8em',
     color: '#F51A00'
   },
   contentSection: {
@@ -291,6 +283,5 @@ const redTheme: Theme = {
     color: '#F51A00'
   }
 };
-
 
 export const themes: Theme[] = [whiteTheme, powderyTheme, redTheme, yellowTheme, blueTheme, grayTheme, pinkTheme, oliveTheme];
