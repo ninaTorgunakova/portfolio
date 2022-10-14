@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { GrNext, GrPrevious } from 'react-icons/gr';
 import { themes, Theme } from '../redux/themes';
-import { images } from '../redux/images';
+import { images } from '../redux/themes';
 import { useDispatch, useSelector } from 'react-redux';
 import { Action, applyTheme } from '../redux/themeActions';
 import { State } from '../redux/themeReducer';
@@ -57,7 +57,7 @@ const MainPage = (): JSX.Element => {
       const theme = themes[index];
       changeTheme(theme)
       setImgsLoading(false);
-    }, 200);
+    }, 300);
   };
 
   return (
@@ -68,28 +68,28 @@ const MainPage = (): JSX.Element => {
           <div className='photo-side' onClick={toNextPhoto}></div>
           <img src={images[currentImage].url} alt='' className='photo'/>
         </div>
-        <div className='buttons'>
-          <button className='button' style={theme.button} onClick={toPreviousPhoto}>
+        <div className='photo-buttons'>
+          <button className='btn-left' style={theme.button} onClick={toPreviousPhoto}>
             <GrPrevious></GrPrevious>
           </button>
-          <button className='button' style={theme.button} onClick={toNextPhoto}>
+          <button className='btn-right' style={theme.button} onClick={toNextPhoto}>
             <GrNext></GrNext>   
           </button>
         </div>
       </div>
       <div className='content'>
         <div className='tabs'>
-          <button className='tab-button'
+          <button className='tab-btn'
               style={(currentTab === ABOUT_TAB_INDEX ? theme.tabsActive : theme.tabs)}
               onClick={() => setCurrentTab(0)}>
             About me
           </button>
-          <button className='tab-button'
+          <button className='tab-btn'
               style={(currentTab === WORKS_TAB_INDEX ? theme.tabsActive : theme.tabs)}
               onClick={() => setCurrentTab(1)}>
             My projects
           </button>
-          <button className='tab-button'
+          <button className='tab-btn'
               style={(currentTab === CONTACTS_TAB_INDEX ? theme.tabsActive : theme.tabs)}
               onClick={() => setCurrentTab(2)}>
             Contacts

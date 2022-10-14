@@ -8,6 +8,7 @@ export interface Theme {
   contentSection: CSSProperties;
   text: CSSProperties;
   boldText: CSSProperties;
+  imageUrl: string;
 };
 
 const whiteTheme: Theme = {
@@ -42,7 +43,8 @@ const whiteTheme: Theme = {
     fontFamily: 'garamond, serif',
     fontWeight: 'bolder',
     color: '#F5D4AE'
-  }
+  },
+  imageUrl: "photos/white.JPG"
 };
 
 const pinkTheme: Theme = {
@@ -78,7 +80,8 @@ const pinkTheme: Theme = {
     fontFamily: 'garamond, serif',
     fontWeight: 'bolder',
     color: '#900038'
-  }
+  },
+  imageUrl: "photos/pink.JPG"
 };
 
 const oliveTheme: Theme = {
@@ -114,7 +117,8 @@ const oliveTheme: Theme = {
     fontFamily: 'garamond, serif',
     fontWeight: 'bolder',
     color: '#000000'
-  }
+  },
+  imageUrl: "photos/olive.JPG"
 };
 
 const powderyTheme: Theme = {
@@ -150,7 +154,8 @@ const powderyTheme: Theme = {
     fontFamily: 'garamond, serif',
     fontWeight: 'bolder',
     color: '#000000'
-  }
+  },
+  imageUrl: "photos/powdery.JPG"
 };
 
 const grayTheme: Theme = {
@@ -185,7 +190,8 @@ const grayTheme: Theme = {
     fontFamily: 'sans-serif',
     fontWeight: 'bolder',
     color: '#F5F5F5'
-  }
+  },
+  imageUrl: "photos/gray.JPG"
 };
 
 const blueTheme: Theme = {
@@ -219,7 +225,8 @@ const blueTheme: Theme = {
     fontFamily: 'Inter',
     fontWeight: 'bolder',
     color: '#212636'
-  }
+  },
+  imageUrl: "photos/blue.JPG"
 };
 
 const yellowTheme: Theme = {
@@ -254,7 +261,8 @@ const yellowTheme: Theme = {
     fontFamily: 'garamond, serif',
     fontWeight: 'bolder',
     color: '#F5DEBF'
-  }
+  },
+  imageUrl: "photos/yellow.JPG"
 };
 
 const redTheme: Theme = {
@@ -289,7 +297,10 @@ const redTheme: Theme = {
     fontFamily: 'sans-serif',
     fontWeight: 'bolder',
     color: '#F51A00'
-  }
+  },
+  imageUrl: "photos/red.JPG"
 };
 
 export const themes: Theme[] = [whiteTheme, powderyTheme, redTheme, yellowTheme, blueTheme, grayTheme, pinkTheme, oliveTheme];
+
+export const images: {url: string}[] = themes.map(theme => ({url: theme.imageUrl}));
