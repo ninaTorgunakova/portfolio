@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react';
 import { GrNext, GrPrevious } from 'react-icons/gr';
+import { useDispatch, useSelector } from 'react-redux';
+
 import { themes, Theme } from '../redux/themes';
 import { images } from '../redux/themes';
-import { useDispatch, useSelector } from 'react-redux';
 import { Action, applyTheme } from '../redux/themeActions';
 import { State } from '../redux/themeReducer';
 import { Dispatch } from 'redux';
@@ -10,6 +11,7 @@ import About from '../About/About';
 import Works from '../Works/Works';
 import Contacts from '../Contacts/Contacts';
 import './MainPage.sass';
+import LoadingSpinner from '../Spinner/Spinner';
 
 const MainPage = (): JSX.Element => {
   const ABOUT_TAB_INDEX = 0;
@@ -18,7 +20,7 @@ const MainPage = (): JSX.Element => {
 
   const [currentImage, setCurrentImage] = useState(0);
   const [currentTab, setCurrentTab] = useState(0);
-  const [imgsLoading, setImgsLoading] = useState(true);
+  const [isImagesLoading, setImagesLoading] = useState(true);
   const dispatch: Dispatch<Action> = useDispatch();
 
   useEffect(() => {
@@ -31,7 +33,7 @@ const MainPage = (): JSX.Element => {
       });
     }
     Promise.all(images.map(image => loadImage(image)))
-    .then(() => setImgsLoading(false))
+      .finally(() => setImagesLoading(false))
   }, []);
 
   const toPreviousPhoto = (): void => {
@@ -51,28 +53,35 @@ const MainPage = (): JSX.Element => {
   const theme: Theme = useSelector((state: State) => state.theme);
 
   const switchPhoto = (index: number): void => {
-    setImgsLoading(true);
+    setImagesLoading(true);
     setCurrentImage(index);
     setTimeout(() => {
       const theme = themes[index];
       changeTheme(theme)
-      setImgsLoading(false);
+      setImagesLoading(false);
     }, 300);
   };
 
   return (
     <div className='main-page' style={theme.mainPage}>
       <div className='gallery'>
-        <div className={'photo-container ' + (imgsLoading ? 'loading' : '')}>
+        {isImagesLoading && <LoadingSpinner/>}
+        <div className={'photo-container ' + (isImagesLoading ? 'loading' : '')}>
           <div className='photo-side' onClick={toPreviousPhoto}></div>
           <div className='photo-side' onClick={toNextPhoto}></div>
           <img src={images[currentImage].url} alt='' className='photo'/>
         </div>
         <div className='photo-buttons'>
-          <button className='btn-left' style={theme.button} onClick={toPreviousPhoto}>
+          <button className='btn-left'
+              style={theme.button}
+              onClick={toPreviousPhoto}
+              disabled={isImagesLoading}>
             <GrPrevious></GrPrevious>
           </button>
-          <button className='btn-right' style={theme.button} onClick={toNextPhoto}>
+          <button className='btn-right'
+              style={theme.button}
+              onClick={toNextPhoto}
+              disabled={isImagesLoading}>
             <GrNext></GrNext>   
           </button>
         </div>

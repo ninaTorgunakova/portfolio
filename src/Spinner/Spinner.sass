@@ -1,0 +1,31 @@
+@-webkit-keyframes spinner 
+  0% 
+    -webkit-transform: rotate(0deg)
+  100%
+    -webkit-transform: rotate(360deg)
+  
+@keyframes spinner
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
+
+.spinner-container
+  position: absolute
+  left: 50%
+  bottom: 50%
+  transform: translate(-50%, 0);
+  & .spinner
+    display: inline-block
+    &:after
+      content: ' '
+      display: block
+      width: 120px
+      height: 120px
+      border-radius: 80%
+      border: 12px solid #FFF
+      border-color: #FFF transparent #FFF transparent
+      animation: spinner 0.5s linear infinite
+      @media screen and (max-width: 600px)
+        width: 80px
+        height: 80px

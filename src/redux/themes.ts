@@ -44,7 +44,7 @@ const whiteTheme: Theme = {
     fontWeight: 'bolder',
     color: '#F5D4AE'
   },
-  imageUrl: "photos/white.JPG"
+  imageUrl: 'photos/white.JPG'
 };
 
 const pinkTheme: Theme = {
@@ -81,7 +81,7 @@ const pinkTheme: Theme = {
     fontWeight: 'bolder',
     color: '#900038'
   },
-  imageUrl: "photos/pink.JPG"
+  imageUrl: 'photos/pink.JPG'
 };
 
 const oliveTheme: Theme = {
@@ -118,7 +118,7 @@ const oliveTheme: Theme = {
     fontWeight: 'bolder',
     color: '#000000'
   },
-  imageUrl: "photos/olive.JPG"
+  imageUrl: 'photos/olive.JPG'
 };
 
 const powderyTheme: Theme = {
@@ -155,7 +155,7 @@ const powderyTheme: Theme = {
     fontWeight: 'bolder',
     color: '#000000'
   },
-  imageUrl: "photos/powdery.JPG"
+  imageUrl: 'photos/powdery.JPG'
 };
 
 const grayTheme: Theme = {
@@ -191,7 +191,7 @@ const grayTheme: Theme = {
     fontWeight: 'bolder',
     color: '#F5F5F5'
   },
-  imageUrl: "photos/gray.JPG"
+  imageUrl: 'photos/gray.JPG'
 };
 
 const blueTheme: Theme = {
@@ -226,7 +226,7 @@ const blueTheme: Theme = {
     fontWeight: 'bolder',
     color: '#212636'
   },
-  imageUrl: "photos/blue.JPG"
+  imageUrl: 'photos/blue.JPG'
 };
 
 const yellowTheme: Theme = {
@@ -262,7 +262,7 @@ const yellowTheme: Theme = {
     fontWeight: 'bolder',
     color: '#F5DEBF'
   },
-  imageUrl: "photos/yellow.JPG"
+  imageUrl: 'photos/yellow.JPG'
 };
 
 const redTheme: Theme = {
@@ -298,7 +298,7 @@ const redTheme: Theme = {
     fontWeight: 'bolder',
     color: '#F51A00'
   },
-  imageUrl: "photos/red.JPG"
+  imageUrl: 'photos/red.JPG'
 };
 
 export const themes: Theme[] = [whiteTheme, powderyTheme, redTheme, yellowTheme, blueTheme, grayTheme, pinkTheme, oliveTheme];
