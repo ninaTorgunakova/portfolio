@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react';
 import { GrNext, GrPrevious } from 'react-icons/gr';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { themes, Theme } from '../redux/themes';
-import { images } from '../redux/themes';
+import { THEMES, Theme } from '../redux/themes';
+import { IMAGES } from '../redux/themes';
 import { Action, applyTheme } from '../redux/themeActions';
 import { State } from '../redux/themeReducer';
 import { Dispatch } from 'redux';
@@ -18,10 +18,20 @@ const MainPage = (): JSX.Element => {
   const WORKS_TAB_INDEX = 1;
   const CONTACTS_TAB_INDEX = 2;
 
-  const [currentImage, setCurrentImage] = useState(0);
-  const [currentTab, setCurrentTab] = useState(0);
+  const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [currentTabIndex, setCurrentTabIndex] = useState(0);
   const [isImagesLoading, setImagesLoading] = useState(true);
+
   const dispatch: Dispatch<Action> = useDispatch();
+  const theme: Theme = useSelector((state: State) => state.theme);
+
+  const handleKeyDown = (event: KeyboardEvent): void => {
+    if (event.key === 'ArrowRight') {
+      toNextPhoto();
+    } else if (event.key === 'ArrowLeft') {
+      toPreviousPhoto();
+    }
+  };
 
   useEffect(() => {
     const loadImage = (image: { url: string; }) => {
@@ -32,17 +42,24 @@ const MainPage = (): JSX.Element => {
         loadImg.onerror = error => reject(error);
       });
     }
-    Promise.all(images.map(image => loadImage(image)))
-      .finally(() => setImagesLoading(false))
-  }, []);
+
+    Promise.all(IMAGES.map(image => loadImage(image))).finally(() => {
+      setImagesLoading(false);
+      window.addEventListener('keydown', handleKeyDown);
+    });
+    
+    return () => {
+      window.removeEventListener('keydown', handleKeyDown);
+    };
+  }, [currentImageIndex]);
 
   const toPreviousPhoto = (): void => {
-    const index = currentImage === 0 ? images.length - 1 : currentImage - 1;
+    const index: number = currentImageIndex === IMAGES.length - 1 ? 0 : currentImageIndex + 1;
     switchPhoto(index);
   };
 
   const toNextPhoto = (): void => {
-    const index = currentImage === images.length - 1 ? 0 : currentImage + 1;
+    const index: number = currentImageIndex === IMAGES.length - 1 ? 0 : currentImageIndex + 1;
     switchPhoto(index);
   };
 
@@ -50,14 +67,11 @@ const MainPage = (): JSX.Element => {
     dispatch(applyTheme(theme));
   };
 
-  const theme: Theme = useSelector((state: State) => state.theme);
-
   const switchPhoto = (index: number): void => {
     setImagesLoading(true);
-    setCurrentImage(index);
+    setCurrentImageIndex(index);
     setTimeout(() => {
-      const theme = themes[index];
-      changeTheme(theme)
+      changeTheme(THEMES[index]);
       setImagesLoading(false);
     }, 300);
   };
@@ -69,7 +83,7 @@ const MainPage = (): JSX.Element => {
         <div className={'photo-container ' + (isImagesLoading ? 'loading' : '')}>
           <div className='photo-side' onClick={toPreviousPhoto}></div>
           <div className='photo-side' onClick={toNextPhoto}></div>
-          <img src={images[currentImage].url} alt='' className='photo'/>
+          <img src={IMAGES[currentImageIndex].url} alt='' className='photo'/>
         </div>
         <div className='photo-buttons'>
           <button className='btn-left'
@@ -89,25 +103,25 @@ const MainPage = (): JSX.Element => {
       <div className='content'>
         <div className='tabs'>
           <button className='tab-btn'
-              style={(currentTab === ABOUT_TAB_INDEX ? theme.tabsActive : theme.tabs)}
-              onClick={() => setCurrentTab(0)}>
+              style={(currentTabIndex === ABOUT_TAB_INDEX ? theme.tabsActive : theme.tabs)}
+              onClick={() => setCurrentTabIndex(0)}>
             About me
           </button>
           <button className='tab-btn'
-              style={(currentTab === WORKS_TAB_INDEX ? theme.tabsActive : theme.tabs)}
-              onClick={() => setCurrentTab(1)}>
+              style={(currentTabIndex === WORKS_TAB_INDEX ? theme.tabsActive : theme.tabs)}
+              onClick={() => setCurrentTabIndex(1)}>
             My projects
           </button>
           <button className='tab-btn'
-              style={(currentTab === CONTACTS_TAB_INDEX ? theme.tabsActive : theme.tabs)}
-              onClick={() => setCurrentTab(2)}>
+              style={(currentTabIndex === CONTACTS_TAB_INDEX ? theme.tabsActive : theme.tabs)}
+              onClick={() => setCurrentTabIndex(2)}>
             Contacts
           </button>
         </div>
         <div className='section' style={theme.contentSection}>
-          {currentTab === ABOUT_TAB_INDEX && <About theme={theme}></About>}
-          {currentTab === WORKS_TAB_INDEX && <Works theme={theme}></Works>}
-          {currentTab === CONTACTS_TAB_INDEX && <Contacts theme={theme}></Contacts>}
+          {currentTabIndex === ABOUT_TAB_INDEX && <About theme={theme}></About>}
+          {currentTabIndex === WORKS_TAB_INDEX && <Works theme={theme}></Works>}
+          {currentTabIndex === CONTACTS_TAB_INDEX && <Contacts theme={theme}></Contacts>}
         </div>
       </div>
     </div>

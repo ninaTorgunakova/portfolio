@@ -1,15 +1,13 @@
 import { Action, APPLY_THEME } from './themeActions';
-import { themes, Theme } from './themes';
+import { THEMES, Theme } from './themes';
 
 export interface State {
   theme: Theme;
 }
 
-const initialState: State = {
-  theme: themes[0]
-};
+const INITIAL_STATE: State = { theme: THEMES[0] };
 
-export const themeReducer = (state: State = initialState, action: Action) => {
+export const themeReducer = (state: State = INITIAL_STATE, action: Action) => {
   switch (action.type) {
     case APPLY_THEME:
       return Object.assign({}, { theme: action.payload } );

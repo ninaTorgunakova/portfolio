@@ -11,7 +11,7 @@ export interface Theme {
   imageUrl: string;
 };
 
-const whiteTheme: Theme = {
+const WHITE_THEME: Theme = {
   mainPage: {
     backgroundColor: '#A89177'
   },
@@ -47,7 +47,7 @@ const whiteTheme: Theme = {
   imageUrl: 'photos/white.JPG'
 };
 
-const pinkTheme: Theme = {
+const PINK_THEME: Theme = {
   mainPage: {
     backgroundColor: '#CD0074'
   },
@@ -84,7 +84,7 @@ const pinkTheme: Theme = {
   imageUrl: 'photos/pink.JPG'
 };
 
-const oliveTheme: Theme = {
+const OLIVE_THEME: Theme = {
   mainPage: {
     backgroundColor: '#BF9230'
   },
@@ -121,7 +121,7 @@ const oliveTheme: Theme = {
   imageUrl: 'photos/olive.JPG'
 };
 
-const powderyTheme: Theme = {
+const POWDERY_THEME: Theme = {
   mainPage: {
     backgroundColor: '#FF5D40'
   },
@@ -158,7 +158,7 @@ const powderyTheme: Theme = {
   imageUrl: 'photos/powdery.JPG'
 };
 
-const grayTheme: Theme = {
+const GRAY_THEME: Theme = {
   mainPage: {
     backgroundColor: '#323232'
   },
@@ -194,7 +194,7 @@ const grayTheme: Theme = {
   imageUrl: 'photos/gray.JPG'
 };
 
-const blueTheme: Theme = {
+const BLUE_THEME: Theme = {
   mainPage: {
     backgroundColor: '#363D57'
   },
@@ -229,7 +229,7 @@ const blueTheme: Theme = {
   imageUrl: 'photos/blue.JPG'
 };
 
-const yellowTheme: Theme = {
+const YELLOW_THEME: Theme = {
   mainPage: {
     backgroundColor: '#A3947F'
   },
@@ -265,7 +265,7 @@ const yellowTheme: Theme = {
   imageUrl: 'photos/yellow.JPG'
 };
 
-const redTheme: Theme = {
+const RED_THEME: Theme = {
   mainPage: {
     backgroundColor: '#B51200'
   },
@@ -301,6 +301,5 @@ const redTheme: Theme = {
   imageUrl: 'photos/red.JPG'
 };
 
-export const themes: Theme[] = [whiteTheme, powderyTheme, redTheme, yellowTheme, blueTheme, grayTheme, pinkTheme, oliveTheme];
-
-export const images: {url: string}[] = themes.map(theme => ({url: theme.imageUrl}));
+export const THEMES: Theme[] = [WHITE_THEME, POWDERY_THEME, RED_THEME, YELLOW_THEME, BLUE_THEME, GRAY_THEME, PINK_THEME, OLIVE_THEME];
+export const IMAGES: {url: string}[] = THEMES.map(theme => ({url: theme.imageUrl}));
