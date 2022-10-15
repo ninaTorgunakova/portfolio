@@ -13,14 +13,14 @@
     align-items: center
 
 .photo-container
-  max-width: 450px
   opacity: 1
   transition: opacity 1s
   position: relative
+  @media screen and (max-width: 600px)
+    max-width: 450px
   &.loading
     min-height: 45vh
-    max-height: calc(80vh - 60px)
-    width: 30vw
+    max-width: 30vw
     opacity: 0
     transition: none
     @media screen and (max-width: 600px)
@@ -29,12 +29,15 @@
 
 .gallery
   display: flex
+  max-width: 30vw
   flex-direction: column
   gap: 10px
   position: relative
   @media screen and (max-width: 600px)
     gap: 5px
     min-height: 45vh
+    width: unset
+    max-width: unset
   & .photo-side
     position: absolute
     top: 0
@@ -46,11 +49,12 @@
       left: 0
   & .photo
     width: 100%
-    max-height: calc(80vh - 60px)
     border-radius: 5px
+    max-height: calc(80vh - 60px)
     @media screen and (max-width: 600px)
       max-height: unset
   & .photo-buttons
+    min-height: 50px
     display: flex
     justify-content: center
     & button[class^='btn-']
