@@ -43,7 +43,7 @@ const About = (state: State): JSX.Element => {
           In my free time, I like to read books about time management and solve
         algorithmic problems on Leetcode - this is my favorite kind of brainstorming
         and training the ability to find an effective problem's solution
-        in a short time. I'm also into studying UI&UX materials because I think
+        in a short time. I'm also into studying UI&UX materials because I think
         that advanced frontend developers should take on responsibility 
         for the experience of interacting with the interface.
       </p>

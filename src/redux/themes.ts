@@ -203,6 +203,7 @@ const BLUE_THEME: Theme = {
   },
   tabs: {
     fontFamily: 'Inter',
+    color: '#F5F5F5',
     backgroundColor: '#212636',
     fontSize: '1.8em'
   },
