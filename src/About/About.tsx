@@ -11,8 +11,7 @@ const About = (state: State): JSX.Element => {
       </p>
 
       <p style={state.theme.text} className='text'>
-          In my most recent job I significantly accelerated the pace of development in a frontend team of five programmers:
-        within 6 months consistently had been closing more than 54% of tasks with a reopening percentage of less than 7%.
+          In my most recent job I significantly accelerated the pace of development in a frontend team.
         I am currently seeking a challenging position with an opportunity to leverage and improve strong programming skills.
       </p>
 
@@ -41,11 +40,11 @@ const About = (state: State): JSX.Element => {
 
       <h1 style={state.theme.boldText}>Interests</h1>
       <p style={state.theme.text} className='text'>
-          In my free time I like to solve algorithmic problems
-        on Leetcode - this is my favorite kind of brainstorm
+          In my free time, I like to read books about time management and solve
+        algorithmic problems on Leetcode - this is my favorite kind of brainstorming
         and training the ability to find an effective problem's solution
-        in a short time. I'm also studying UI&UX materials beacause I think
-        that advanced frontend developer should take on responsibility 
+        in a short time. I'm also into studying UI&UX materials because I think
+        that advanced frontend developers should take on responsibility 
         for the experience of interacting with the interface.
       </p>
     </div>
