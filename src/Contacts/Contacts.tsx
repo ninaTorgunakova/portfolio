@@ -7,24 +7,33 @@ const Contacts = (state: State): JSX.Element => {
       <span style={state.theme.boldText}>
         +995 574 895 822 (Georgia)
       </span>
-      <span style={state.theme.boldText}>
+      <a href='mailto:ninatorgunakova@gmail.com' target='_blank' rel='noreferrer' style={state.theme.boldText}>
         ninatorgunakova@gmail.com
-      </span>
-      <a href='https://t.me/seagullNina' target='_blank' rel='noreferrer' className='link' style={state.theme.boldText}>
-        tg: @seagullNina
       </a>
-
-      <div className='contact-icons'>
-        <a href='https://www.linkedin.com/in/nina-torgunakova/' className='link' target='_blank' rel='noreferrer'>
-          <img src='icons/linkedin.png' alt='' className='icon'></img>
+      <span>
+        <b style={state.theme.boldText}>tg: </b>
+        <a href='https://t.me/seagullNina' target='_blank' rel='noreferrer' style={state.theme.text}>
+          @seagullNina
         </a>
-        <a href='https://github.com/ninaTorgunakova' className='link' target='_blank' rel='noreferrer'>
-          <img src='icons/github.png' alt='' className='icon'></img>
+      </span>
+      <span>
+        <b style={state.theme.boldText}>linkedIn: </b>
+        <a href='https://www.linkedin.com/in/nina-torgunakova/' target='_blank' rel='noreferrer' style={state.theme.text}>
+          nina-torgunakova
         </a>
-        <a href='https://www.instagram.com/nina_seagull/' className='link' target='_blank' rel='noreferrer'>
-          <img src='icons/instagram.png' alt='' className='icon'></img>
+      </span>
+      <span>
+        <b style={state.theme.boldText}>gitHub: </b>
+        <a href='https://github.com/ninaTorgunakova' target='_blank' rel='noreferrer' style={state.theme.text}>
+          ninaTorgunakova
         </a>
-      </div>
+      </span>
+      <span>
+        <b style={state.theme.boldText}>inst: </b>
+        <a href='https://www.instagram.com/nina_seagull/' target='_blank' rel='noreferrer' style={state.theme.text}>
+          nina_seagull
+        </a>
+      </span>
     </div>
   );
 };

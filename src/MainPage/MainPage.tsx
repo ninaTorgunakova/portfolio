@@ -54,7 +54,7 @@ const MainPage = (): JSX.Element => {
   }, [currentImageIndex]);
 
   const toPreviousPhoto = (): void => {
-    const index: number = currentImageIndex === IMAGES.length - 1 ? 0 : currentImageIndex + 1;
+    const index: number = currentImageIndex === 0 ? IMAGES.length - 1 : currentImageIndex - 1;
     switchPhoto(index);
   };
 

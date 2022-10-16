@@ -36,7 +36,7 @@ const WHITE_THEME: Theme = {
   },
   text: {
     fontFamily: 'garamond, serif',
-    fontSize: '1.5em',
+    fontSize: '1em',
     color: '#F5D4AE'
   },
   boldText: {
@@ -72,7 +72,7 @@ const PINK_THEME: Theme = {
   },
   text: {
     fontFamily: 'garamond, serif',
-    fontSize: '1.5em',
+    fontSize: '1em',
     color: '#900038',
     fontWeight: 'lighter'
   },
@@ -109,7 +109,7 @@ const OLIVE_THEME: Theme = {
   },
   text: {
     fontFamily: 'garamond, serif',
-    fontSize: '1.5em',
+    fontSize: '1em',
     color: '#000000',
     fontWeight: '700'
   },
@@ -146,7 +146,7 @@ const POWDERY_THEME: Theme = {
   },
   text: {
     fontFamily: 'garamond, serif',
-    fontSize: '1.5em',
+    fontSize: '1em',
     color: '#000000',
     fontWeight: 'lighter'
   },
@@ -183,7 +183,7 @@ const GRAY_THEME: Theme = {
   },
   text: {
     fontFamily: 'sans-serif',
-    fontSize: '1.5em',
+    fontSize: '1em',
     color: '#F5F5F5'
   },
   boldText: {
@@ -219,7 +219,7 @@ const BLUE_THEME: Theme = {
   },
   text: {
     fontFamily: 'Inter',
-    fontSize: '1.5em',
+    fontSize: '1em',
     color: '#212636'
   },
   boldText: {
@@ -255,7 +255,7 @@ const YELLOW_THEME: Theme = {
   },
   text: {
     fontFamily: 'garamond, serif',
-    fontSize: '1.5em',
+    fontSize: '1em',
     color: '#F5DEBF'
   },
   boldText: {
@@ -291,7 +291,7 @@ const RED_THEME: Theme = {
   },
   text: {
     fontFamily: 'sans-serif',
-    fontSize: '1.5em',
+    fontSize: '1em',
     color: '#F51A00'
   },
   boldText: {
@@ -302,5 +302,5 @@ const RED_THEME: Theme = {
   imageUrl: 'photos/red.JPG'
 };
 
-export const THEMES: Theme[] = [WHITE_THEME, POWDERY_THEME, RED_THEME, YELLOW_THEME, BLUE_THEME, GRAY_THEME, PINK_THEME, OLIVE_THEME];
+export const THEMES: Theme[] = [GRAY_THEME, PINK_THEME, BLUE_THEME, RED_THEME, POWDERY_THEME, YELLOW_THEME, WHITE_THEME, OLIVE_THEME];
 export const IMAGES: {url: string}[] = THEMES.map(theme => ({url: theme.imageUrl}));
