@@ -73,7 +73,7 @@ const MainPage = (): JSX.Element => {
     setTimeout(() => {
       changeTheme(THEMES[index]);
       setImagesLoading(false);
-    }, 300);
+    }, 400);
   };
 
   return (

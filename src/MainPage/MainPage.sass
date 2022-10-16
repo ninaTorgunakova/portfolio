@@ -1,17 +1,23 @@
 @mixin photo-adaptive
   width: 100%
-  height: calc(80vh - 60px)
+  height: calc(85vh - 60px)
   @media screen and (max-width: 830px)
-    height: calc(55vh - 60px)
+    height: calc(60vh - 60px)
+    min-height: 350px
   @media screen and (max-width: 600px)
-    min-height: 300px
     height: 90vh
   @media screen and (max-width: 450px)
-    height: 80vh
+    height: 77vh
   @media screen and (max-width: 415px)
     height: 68vh
   @media screen and (max-width: 340px)
     height: 50vh
+  
+@mixin loading-adaptive
+  @media screen and (max-width: 1450px)
+    min-width: 35vw
+  @media screen and (max-width: 1250px)
+    min-width: 45vw
   
 .main-page
   display: flex
@@ -32,14 +38,19 @@
 .photo-container
   @include photo-adaptive
   opacity: 1
-  transition: opacity 1.5s
+  transition: opacity 0.8s
   position: relative
   &.loading
+    @include loading-adaptive
     @include photo-adaptive
     opacity: 0
     transition: none
     min-width: 30vw
     min-height: 45vh
+    @media screen and (max-width: 1450px)
+      min-width: 35vw
+    @media screen and (max-width: 1250px)
+      min-width: 45vw
   .photo
     @include photo-adaptive
     border-radius: 5px
@@ -63,10 +74,12 @@
       left: 0
 
   & .photo-buttons
+    @include loading-adaptive
     min-height: 50px
     min-width: 30vw
     display: flex
     justify-content: center
+
     & button[class^='btn-']
       width: 100%
       border: none
@@ -134,6 +147,9 @@
   width: 100%
   overflow-y: auto
   border-radius: 5px
+  @media screen and (max-width: 830px)
+    height: calc(65vh - 60px)
+    min-height: 350px
   @media screen and (max-width: 600px)
     height: 100%
 
