@@ -87,16 +87,18 @@ const MainPage = (): JSX.Element => {
         </div>
         <div className='photo-buttons'>
           <button className='btn-left'
+              aria-label='left'
               style={theme.button}
               onClick={toPreviousPhoto}
               disabled={isImagesLoading}>
-            <GrPrevious></GrPrevious>
+            <i style={theme.arrow} className='arrow left'></i>
           </button>
           <button className='btn-right'
+              aria-label='right'
               style={theme.button}
               onClick={toNextPhoto}
               disabled={isImagesLoading}>
-            <GrNext></GrNext>   
+            <i style={theme.arrow} className='arrow right' ></i>
           </button>
         </div>
       </div>

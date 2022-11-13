@@ -8,6 +8,7 @@ export interface Theme {
   contentSection: CSSProperties;
   text: CSSProperties;
   boldText: CSSProperties;
+  arrow: CSSProperties;
   imageUrl: string;
 };
 
@@ -16,7 +17,7 @@ const WHITE_THEME: Theme = {
     backgroundColor: '#A89177'
   },
   button: {
-    backgroundColor: '#756553',
+    backgroundColor: '#5C4D3C',
   },
   tabs: {
     fontFamily: 'garamond, serif',
@@ -24,15 +25,18 @@ const WHITE_THEME: Theme = {
     backgroundColor: '#362E26',
     color: '#F5D4AE'
   },
+  arrow: {
+    borderColor: 'black'
+  },
   tabsActive: {
     fontFamily: 'garamond, serif',
     fontWeight: 'bolder',
     fontSize: '1.8em',
-    backgroundColor: '#756553',
+    backgroundColor: '#5C4D3C',
     color: '#F5D4AE'
   },
   contentSection: {
-    backgroundColor: '#756553'
+    backgroundColor: '#5C4D3C'
   },
   text: {
     fontFamily: 'garamond, serif',
@@ -44,7 +48,7 @@ const WHITE_THEME: Theme = {
     fontWeight: 'bolder',
     color: '#F5D4AE'
   },
-  imageUrl: 'photos/white.JPG'
+  imageUrl: 'photos/white.webp'
 };
 
 const PINK_THEME: Theme = {
@@ -53,6 +57,9 @@ const PINK_THEME: Theme = {
   },
   button: {
     backgroundColor: '#EE6B9E',
+  },
+  arrow: {
+    borderColor: 'black'
   },
   tabs: {
     fontFamily: 'garamond, serif',
@@ -73,15 +80,15 @@ const PINK_THEME: Theme = {
   text: {
     fontFamily: 'garamond, serif',
     fontSize: '1em',
-    color: '#900038',
+    color: '#000000',
     fontWeight: 'lighter'
   },
   boldText: {
     fontFamily: 'garamond, serif',
     fontWeight: 'bolder',
-    color: '#900038'
+    color: '#000000'
   },
-  imageUrl: 'photos/pink.JPG'
+  imageUrl: 'photos/pink.webp'
 };
 
 const OLIVE_THEME: Theme = {
@@ -111,14 +118,17 @@ const OLIVE_THEME: Theme = {
     fontFamily: 'garamond, serif',
     fontSize: '1em',
     color: '#000000',
-    fontWeight: '700'
+    fontWeight: '600'
+  },
+  arrow: {
+    borderColor: 'black'
   },
   boldText: {
     fontFamily: 'garamond, serif',
     fontWeight: 'bolder',
     color: '#000000'
   },
-  imageUrl: 'photos/olive.JPG'
+  imageUrl: 'photos/olive.webp'
 };
 
 const POWDERY_THEME: Theme = {
@@ -126,36 +136,38 @@ const POWDERY_THEME: Theme = {
     backgroundColor: '#FF5D40'
   },
   button: {
-    backgroundColor: '#BF4630',
+    backgroundColor: '#FFB293',
   },
   tabs: {
     fontFamily: 'garamond, serif',
     fontSize: '1.8em',
-    backgroundColor: '#BF4630',
+    backgroundColor: '#FFB293',
     color: '#000000'
   },
   tabsActive: {
     fontFamily: 'garamond, serif',
     fontWeight: 'bolder',
     fontSize: '1.8em',
-    backgroundColor: '#BF4630',
+    backgroundColor: '#FFB293',
     color: '#000000'
   },
   contentSection: {
-    backgroundColor: '#BF4630'
+    backgroundColor: '#FFB293'
+  },
+  arrow: {
+    borderColor: 'black'
   },
   text: {
     fontFamily: 'garamond, serif',
     fontSize: '1em',
     color: '#000000',
-    fontWeight: 'lighter'
   },
   boldText: {
     fontFamily: 'garamond, serif',
     fontWeight: 'bolder',
     color: '#000000'
   },
-  imageUrl: 'photos/powdery.JPG'
+  imageUrl: 'photos/powdery.webp'
 };
 
 const GRAY_THEME: Theme = {
@@ -167,7 +179,7 @@ const GRAY_THEME: Theme = {
   },
   tabs: {
     fontFamily: 'sans-serif',
-    backgroundColor: '#757575',
+    backgroundColor: '#5C5C5C',
     fontSize: '1.8em',
     color: '#F5F5F5'
   },
@@ -177,6 +189,9 @@ const GRAY_THEME: Theme = {
     backgroundColor: '#363636',
     fontSize: '1.8em',
     color: '#F5F5F5'
+  },
+  arrow: {
+    borderColor: 'white'
   },
   contentSection: {
     backgroundColor: '#363636'
@@ -191,7 +206,7 @@ const GRAY_THEME: Theme = {
     fontWeight: 'bolder',
     color: '#F5F5F5'
   },
-  imageUrl: 'photos/gray.JPG'
+  imageUrl: 'photos/gray.webp'
 };
 
 const BLUE_THEME: Theme = {
@@ -199,7 +214,7 @@ const BLUE_THEME: Theme = {
     backgroundColor: '#363D57'
   },
   button: {
-    backgroundColor: '#405275',
+    backgroundColor: '#7283A9',
   },
   tabs: {
     fontFamily: 'Inter',
@@ -210,24 +225,27 @@ const BLUE_THEME: Theme = {
   tabsActive: {
     fontFamily: 'Inter',
     fontWeight: 'bolder',
-    backgroundColor: '#405275',
+    backgroundColor: '#7283A9',
     color: '#F5F5F5',
     fontSize: '1.8em'
   },
   contentSection: {
-    backgroundColor: '#405275'
+    backgroundColor: '#7283A9'
   },
   text: {
     fontFamily: 'Inter',
     fontSize: '1em',
-    color: '#212636'
+    color: '#000000'
+  },
+  arrow: {
+    borderColor: 'black'
   },
   boldText: {
     fontFamily: 'Inter',
     fontWeight: 'bolder',
-    color: '#212636'
+    color: '#000000'
   },
-  imageUrl: 'photos/blue.JPG'
+  imageUrl: 'photos/blue.webp'
 };
 
 const YELLOW_THEME: Theme = {
@@ -242,6 +260,9 @@ const YELLOW_THEME: Theme = {
     backgroundColor: '#756B5B',
     color: '#F5DEBF',
     fontSize: '1.8em'
+  },
+  arrow: {
+    borderColor: 'black'
   },
   tabsActive: {
     fontFamily: 'garamond, serif',
@@ -263,7 +284,7 @@ const YELLOW_THEME: Theme = {
     fontWeight: 'bolder',
     color: '#F5DEBF'
   },
-  imageUrl: 'photos/yellow.JPG'
+  imageUrl: 'photos/yellow.webp'
 };
 
 const RED_THEME: Theme = {
@@ -271,36 +292,39 @@ const RED_THEME: Theme = {
     backgroundColor: '#B51200'
   },
   button: {
-    backgroundColor: '#520800',
+    backgroundColor: '#370000',
+  },
+  arrow: {
+    borderColor: 'white'
   },
   tabs: {
     fontFamily: 'sans-serif',
-    backgroundColor: '#750C00',
+    backgroundColor: '#922B19',
     fontSize: '1.8em',
-    color: '#F51A00'
+    color: '#F5B3AB'
   },
   tabsActive: {
     fontFamily: 'sans-serif',
     fontWeight: 'bolder',
-    backgroundColor: '#520800',
+    backgroundColor: '#370000',
     fontSize: '1.8em',
-    color: '#F51A00'
+    color: '#F5B3AB'
   },
   contentSection: {
-    backgroundColor: '#520800'
+    backgroundColor: '#370000'
   },
   text: {
     fontFamily: 'sans-serif',
     fontSize: '1em',
-    color: '#F51A00'
+    color: '#F5B3AB'
   },
   boldText: {
     fontFamily: 'sans-serif',
     fontWeight: 'bolder',
-    color: '#F51A00'
+    color: '#F5B3AB'
   },
-  imageUrl: 'photos/red.JPG'
+  imageUrl: 'photos/red.webp'
 };
 
-export const THEMES: Theme[] = [GRAY_THEME, PINK_THEME, BLUE_THEME, RED_THEME, POWDERY_THEME, YELLOW_THEME, WHITE_THEME, OLIVE_THEME];
+export const THEMES: Theme[] = [PINK_THEME, GRAY_THEME, BLUE_THEME, RED_THEME, POWDERY_THEME, YELLOW_THEME, WHITE_THEME, OLIVE_THEME];
 export const IMAGES: {url: string}[] = THEMES.map(theme => ({url: theme.imageUrl}));
