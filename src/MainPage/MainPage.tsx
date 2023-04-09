@@ -1,29 +1,29 @@
 import { useEffect, useState } from 'react';
-import { GrNext, GrPrevious } from 'react-icons/gr';
-import { useDispatch, useSelector } from 'react-redux';
 
-import { THEMES, Theme } from '../redux/themes';
-import { IMAGES } from '../redux/themes';
-import { Action, applyTheme } from '../redux/themeActions';
-import { State } from '../redux/themeReducer';
-import { Dispatch } from 'redux';
+import { THEMES, Theme, IMAGES, $theme } from '../state/themes';
 import About from '../About/About';
-import Works from '../Works/Works';
-import Contacts from '../Contacts/Contacts';
-import './MainPage.sass';
+import Works from '../Projects/Projects';
 import LoadingSpinner from '../Spinner/Spinner';
+
+import './MainPage.sass';
+import { useStore } from '@nanostores/react';
+import Articles from '../Articles/Articles';
+import Highlights from '../Highlights/Highlights';
+
+import '../styles/Works.sass';
+import '../styles/Work.sass';
 
 const MainPage = (): JSX.Element => {
   const ABOUT_TAB_INDEX = 0;
   const WORKS_TAB_INDEX = 1;
-  const CONTACTS_TAB_INDEX = 2;
+  const ARTICLES_TAB_INDEX = 2;
+  const HIGHLIGHTS_TAB_INDEX = 3;
 
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [currentTabIndex, setCurrentTabIndex] = useState(0);
   const [isImagesLoading, setImagesLoading] = useState(true);
 
-  const dispatch: Dispatch<Action> = useDispatch();
-  const theme: Theme = useSelector((state: State) => state.theme);
+  const theme: Theme = useStore($theme);
 
   const handleKeyDown = (event: KeyboardEvent): void => {
     if (event.key === 'ArrowRight') {
@@ -64,7 +64,7 @@ const MainPage = (): JSX.Element => {
   };
 
   const changeTheme = (theme: Theme): void => {
-    dispatch(applyTheme(theme));
+    $theme.set(theme);
   };
 
   const switchPhoto = (index: number): void => {
@@ -115,15 +115,21 @@ const MainPage = (): JSX.Element => {
             My projects
           </button>
           <button className='tab-btn'
-              style={(currentTabIndex === CONTACTS_TAB_INDEX ? theme.tabsActive : theme.tabs)}
+              style={(currentTabIndex === ARTICLES_TAB_INDEX ? theme.tabsActive : theme.tabs)}
               onClick={() => setCurrentTabIndex(2)}>
-            Contacts
+            Articles
+          </button>
+          <button className='tab-btn'
+              style={(currentTabIndex === HIGHLIGHTS_TAB_INDEX ? theme.tabsActive : theme.tabs)}
+              onClick={() => setCurrentTabIndex(3)}>
+            Highlights
           </button>
         </div>
         <div className='section' style={theme.contentSection}>
-          {currentTabIndex === ABOUT_TAB_INDEX && <About theme={theme}></About>}
-          {currentTabIndex === WORKS_TAB_INDEX && <Works theme={theme}></Works>}
-          {currentTabIndex === CONTACTS_TAB_INDEX && <Contacts theme={theme}></Contacts>}
+          {currentTabIndex === ABOUT_TAB_INDEX && <About />}
+          {currentTabIndex === WORKS_TAB_INDEX && <Works />}
+          {currentTabIndex === ARTICLES_TAB_INDEX && <Articles />}
+          {currentTabIndex === HIGHLIGHTS_TAB_INDEX && <Highlights />}
         </div>
       </div>
     </div>
