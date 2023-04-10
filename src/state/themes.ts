@@ -121,7 +121,7 @@ const OLIVE_THEME: Theme = {
     fontFamily: 'garamond, serif',
     fontSize: '1.5em',
     color: '#000000',
-    fontWeight: '600'
+    fontWeight: 'lighter'
   },
   arrow: {
     borderColor: 'black'
