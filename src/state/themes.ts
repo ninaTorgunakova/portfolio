@@ -8,6 +8,7 @@ export interface Theme {
   tabsActive: CSSProperties;
   contentSection: CSSProperties;
   text: CSSProperties;
+  link: CSSProperties;
   boldText: CSSProperties;
   arrow: CSSProperties;
   imageUrl: string;
@@ -42,6 +43,10 @@ const WHITE_THEME: Theme = {
   text: {
     fontFamily: 'garamond, serif',
     fontSize: '1.5em',
+    color: '#000000'
+  },
+  link: {
+    fontFamily: 'garamond, serif',
     color: '#000000'
   },
   boldText: {
@@ -85,6 +90,11 @@ const PINK_THEME: Theme = {
     color: '#000000',
     fontWeight: 'lighter'
   },
+  link: {
+    fontFamily: 'garamond, serif',
+    color: '#000000',
+    fontWeight: 'lighter'
+  },
   boldText: {
     fontFamily: 'garamond, serif',
     fontWeight: 'bolder',
@@ -120,6 +130,11 @@ const OLIVE_THEME: Theme = {
   text: {
     fontFamily: 'garamond, serif',
     fontSize: '1.5em',
+    color: '#000000',
+    fontWeight: 'lighter'
+  },
+  link: {
+    fontFamily: 'garamond, serif',
     color: '#000000',
     fontWeight: 'lighter'
   },
@@ -166,6 +181,10 @@ const POWDERY_THEME: Theme = {
     fontSize: '1.5em',
     color: '#000000',
   },
+  link: {
+    fontFamily: 'garamond, serif',
+    color: '#000000',
+  },
   boldText: {
     fontFamily: 'garamond, serif',
     fontWeight: 'bolder',
@@ -206,6 +225,10 @@ const GRAY_THEME: Theme = {
     fontSize: '1.5em',
     color: '#F5F5F5'
   },
+  link: {
+    fontFamily: 'garamond, serif',
+    color: '#F5F5F5',
+  },
   boldText: {
     fontFamily: 'sans-serif',
     fontWeight: 'bolder',
@@ -242,6 +265,10 @@ const BLUE_THEME: Theme = {
     fontFamily: 'Inter',
     fontSize: '1.5em',
     color: '#000000'
+  },
+  link: {
+    fontFamily: 'Inter',
+    color: '#000000',
   },
   arrow: {
     borderColor: 'black'
@@ -285,6 +312,10 @@ const YELLOW_THEME: Theme = {
     fontFamily: 'garamond, serif',
     fontSize: '1.5em',
     color: '#F5DEBF'
+  },
+  link: {
+    fontFamily: 'garamond, serif',
+    color: '#F5DEBF',
   },
   boldText: {
     fontFamily: 'garamond, serif',

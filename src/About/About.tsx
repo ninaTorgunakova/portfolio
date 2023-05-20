@@ -8,9 +8,8 @@ const About = (): JSX.Element => {
   return (
     <div className='about-content'>
       <p style={theme.text} className='text'>
-          My name is Nina, I'm 23 years old and I'm a frontend developer with 3+ years of working experience
-        with Angular and React. I had been working as a copywriter for a couple of years while studying at university,
-        but soon decided that I love to write code much more than articles.
+          My name is Nina, I'm 23 years old and  I'm a Frontend Engineer at <a href='https://evilmartians.com/' target='_blank' rel='noreferrer' style={theme.link}>Evil Martians.</a> I'm talking and writing
+          about what I love: algorithms and web technologies. My great inspiration is to shape thoughts into articles, code, and also to speak publicly.
       </p>
 
       <h1 style={theme.boldText}>Education</h1>
