@@ -8,7 +8,7 @@ const PROJECTS: ProjectInfo[] = [{
   linkWeb: 'https://nina-torgunakova.vercel.app/',
   linkCode: 'https://github.com/ninaTorgunakova/portfolio'
 }, {
-  title: 'Nanostores Angular',
+  title: 'Nano Stores Angular',
   description: 'Angular integration for Nano Stores, a tiny state manager with many atomic tree-shakable stores.',
   iconPath: 'icons/nanostores.svg',
   linkCode: 'https://github.com/nanostores/angular'

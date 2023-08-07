@@ -3,6 +3,16 @@ import { ArticleInfo } from './Article';
 import Article from './Article';
 
 const ARTICLES: ArticleInfo[] = [{
+  title: 'Before your next frontend pull request, use this checklist',
+  description: 'My article for front-end engineers about what is important to consider before creating a new PR',
+  link: 'https://evilmartians.com/chronicles/before-your-next-frontend-pull-request-use-this-checklist',
+  iconPath: 'icons/frontendRequest.webp'
+}, {
+  title: 'How a year-long LeetCode habit upped my professional game—Martian Chronicles, Evil Martians’ team blog',
+  description: 'My article about benefits of solving algorithms, and why it`s important not only for job interviews.',
+  link: 'https://evilmartians.com/chronicles/how-a-year-long-leetcode-habit-upped-my-professional-game',
+  iconPath: 'icons/yearLeetCode.webp'
+}, {
   title: 'Nano Stores in Angular: how to make the state management simpler',
   description: 'The article is about how to use Nano Stores in Angular and what are its advantages.',
   link: 'https://dev.to/evilmartians/nano-stores-in-angular-how-to-make-the-state-management-simpler-38a1',
